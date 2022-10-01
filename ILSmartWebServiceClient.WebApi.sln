@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILSmartWebServiceClient.WebApi", "ILSmartWebServiceClient.WebApi\ILSmartWebServiceClient.WebApi.csproj", "{59B6775C-7885-443C-9A0E-35139EAE9100}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILSmarWebServiceClient.LIbrary", "ILSmarWebServiceClient.LIbrary\ILSmarWebServiceClient.LIbrary.csproj", "{66199A7C-368B-4A7A-8834-B3B69A2FCC48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ILSmartWebServiceClient.Data", "ILSmartWebServiceClient.Data\ILSmartWebServiceClient.Data.csproj", "{F39EA47F-8BDA-4038-8728-5149748A3A30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59B6775C-7885-443C-9A0E-35139EAE9100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B6775C-7885-443C-9A0E-35139EAE9100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B6775C-7885-443C-9A0E-35139EAE9100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B6775C-7885-443C-9A0E-35139EAE9100}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66199A7C-368B-4A7A-8834-B3B69A2FCC48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66199A7C-368B-4A7A-8834-B3B69A2FCC48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66199A7C-368B-4A7A-8834-B3B69A2FCC48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66199A7C-368B-4A7A-8834-B3B69A2FCC48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39EA47F-8BDA-4038-8728-5149748A3A30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39EA47F-8BDA-4038-8728-5149748A3A30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39EA47F-8BDA-4038-8728-5149748A3A30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39EA47F-8BDA-4038-8728-5149748A3A30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5FA670B4-7E19-4DAE-BDFC-68772ED4A042}
+	EndGlobalSection
+EndGlobal
