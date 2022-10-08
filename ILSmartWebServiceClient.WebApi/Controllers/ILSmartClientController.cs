@@ -12,13 +12,13 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
     {
         private readonly ILogger<ILSmartClientController> _logger;
 
-        private readonly ILSmarWebServiceClientService _class1;
+        private readonly ILSmarWebServiceClientService _ilSmarWebServiceClientService;
 
         public ILSmartClientController(ILogger<ILSmartClientController> logger,
             ILSmartWebServiceClientRepository repositoryClass,
             ILSmarWebServiceClientService class1)
         {
-            _class1 = class1;
+            _ilSmarWebServiceClientService = class1;
             _logger = logger;
         }
 
@@ -26,21 +26,21 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
         [Route("GetGovernmentData")]
         public async Task<GetGovernmentDataResponseBody> GetGovernmentData()
         {           
-            return await _class1.GetGovernmentDataAsync(new string[] { "MCRL" }, "0JT27-HUPP", "WEBSERVICETEST", "TESTU01"); ;
+            return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { "MCRL" }, "0JT27-HUPP", "WEBSERVICETEST", "TESTU01");
         }
 
         [HttpGet]
         [Route("GetCageContact")]
         public async Task<GetCageContactResponseBody> GetCageContact()
         {
-            return await _class1.GetCageContactAsync("0JT27", "WEBSERVICETEST", "TESTU01");
+            return await _ilSmarWebServiceClientService.GetCageContactAsync("0JT27", "WEBSERVICETEST", "TESTU01");
         }
 
         [HttpGet]
         [Route("GetNiinsByPart")]
         public async Task<GetNiinsByPartResponseBody> GetNiinsByPart()
         {
-            return await _class1.GetNiinsByPartAsync("0JT27-HUPP", "WEBSERVICETEST", "TESTU01");
+            return await _ilSmarWebServiceClientService.GetNiinsByPartAsync("0JT27-HUPP", "WEBSERVICETEST", "TESTU01");
         }
     }
 }
