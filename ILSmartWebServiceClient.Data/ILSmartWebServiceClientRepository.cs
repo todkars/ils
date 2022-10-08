@@ -1,13 +1,12 @@
 ﻿using ILSmartWebServiceClient.Data.Database;
-using Microsoft.EntityFrameworkCore;
 
 namespace ILSmartWebServiceClient.Data
 {
-    public class RepositoryClass
+    public class ILSmartWebServiceClientRepository
     {
         private readonly ILSmartWebServiceClientDbContext iLSmartWebServiceClientDbContext;
 
-        public RepositoryClass(ILSmartWebServiceClientDbContext dbContext)
+        public ILSmartWebServiceClientRepository(ILSmartWebServiceClientDbContext dbContext)
         {
             iLSmartWebServiceClientDbContext = dbContext;
         }

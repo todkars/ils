@@ -18,9 +18,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<ILSmartWebServiceClientDbContext>(opt =>
         opt.UseNpgsql(builder.Configuration.GetConnectionString("ILSmartClientDataConnection")));
 
-builder.Services.AddScoped<RepositoryClass, RepositoryClass>();
+builder.Services.AddScoped<ILSmartWebServiceClientRepository, ILSmartWebServiceClientRepository>();
 builder.Services.AddScoped<ISyncReply, SyncReplyClient>();
-builder.Services.AddScoped<Class1, Class1>();
+builder.Services.AddScoped<ILSmarWebServiceClientService, ILSmarWebServiceClientService>();
 
 var app = builder.Build();
 
