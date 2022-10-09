@@ -1,6 +1,5 @@
 using ILSmartServiceReference;
 using ILSmartWebServiceClient.Data;
-using ILSmartWebServiceClient.Data.Database;
 using ILSmarWebServiceClient.LIbrary;
 using Microsoft.AspNetCore.Mvc;
 
@@ -22,25 +21,25 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
             _logger = logger;
         }
 
+        [Route("[action]/{govtFilesToSearch}/{partNumber}")]
         [HttpGet]
-        [Route("GetGovernmentData")]
-        public async Task<GetGovernmentDataResponseBody> GetGovernmentData()
-        {           
-            return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { "MCRL" }, "0JT27-HUPP", "WEBSERVICETEST", "TESTU01");
+        public async Task<GetGovernmentDataResponseBody> GetGovernmentData([FromRoute] string govtFilesToSearch, [FromRoute] string partNumber)
+        {
+            return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { govtFilesToSearch }, partNumber, "WEBSERVICETEST", "TESTU01");
         }
 
+        [Route("[action]/{cage}")]
         [HttpGet]
-        [Route("GetCageContact")]
-        public async Task<GetCageContactResponseBody> GetCageContact()
+        public async Task<GetCageContactResponseBody> GetCageContact([FromRoute] string cage)
         {
-            return await _ilSmarWebServiceClientService.GetCageContactAsync("0JT27", "WEBSERVICETEST", "TESTU01");
+            return await _ilSmarWebServiceClientService.GetCageContactAsync(cage, "WEBSERVICETEST", "TESTU01");
         }
 
+        [Route("[action]/{partNumber}")]
         [HttpGet]
-        [Route("GetNiinsByPart")]
-        public async Task<GetNiinsByPartResponseBody> GetNiinsByPart()
+        public async Task<GetNiinsByPartResponseBody> GetNiinsByPart([FromRoute] string partNumber)
         {
-            return await _ilSmarWebServiceClientService.GetNiinsByPartAsync("0JT27-HUPP", "WEBSERVICETEST", "TESTU01");
+            return await _ilSmarWebServiceClientService.GetNiinsByPartAsync(partNumber, "WEBSERVICETEST", "TESTU01");
         }
     }
 }
