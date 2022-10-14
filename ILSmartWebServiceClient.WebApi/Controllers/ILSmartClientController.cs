@@ -27,19 +27,5 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
         {
             return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { govtFilesToSearch }, partNumber, "WEBSERVICETEST", "TESTU01");
         }
-
-        [Route("[action]/{cage}")]
-        [HttpGet]
-        public async Task<GetCageContactResponseBody> GetCageContact([FromRoute] string cage)
-        {
-            return await _ilSmarWebServiceClientService.GetCageContactAsync(cage, "WEBSERVICETEST", "TESTU01");
-        }
-
-        [Route("[action]/{partNumber}")]
-        [HttpGet]
-        public async Task<GetNiinsByPartResponseBody> GetNiinsByPart([FromRoute] string partNumber)
-        {
-            return await _ilSmarWebServiceClientService.GetNiinsByPartAsync(partNumber, "WEBSERVICETEST", "TESTU01");
-        }
     }
 }
