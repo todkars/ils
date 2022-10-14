@@ -14,15 +14,80 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UpdateViewedIndicatorResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class UpdateViewedIndicatorResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="Document", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Document : object
+    {
+        
+        private byte[] ContentField;
+        
+        private string FileNameField;
+        
+        private string FileTypeField;
+        
+        private System.Nullable<long> IdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public byte[] Content
+        {
+            get
+            {
+                return this.ContentField;
+            }
+            set
+            {
+                this.ContentField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName
+        {
+            get
+            {
+                return this.FileNameField;
+            }
+            set
+            {
+                this.FileNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileType
+        {
+            get
+            {
+                return this.FileTypeField;
+            }
+            set
+            {
+                this.FileTypeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> Id
+        {
+            get
+            {
+                return this.IdField;
+            }
+            set
+            {
+                this.IdField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SendMessageBroadcastResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class SendMessageBroadcastResponseBody : object
     {
         
         private ILSmartServiceReference.Fault[] FaultsField;
         
-        private long RfqIdField;
-        
-        private System.Nullable<bool> ViewedIndicatorField;
+        private string MessageBroadcastIdField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Fault[] Faults
@@ -38,35 +103,22 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public long RfqId
+        public string MessageBroadcastId
         {
             get
             {
-                return this.RfqIdField;
+                return this.MessageBroadcastIdField;
             }
             set
             {
-                this.RfqIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> ViewedIndicator
-        {
-            get
-            {
-                return this.ViewedIndicatorField;
-            }
-            set
-            {
-                this.ViewedIndicatorField = value;
+                this.MessageBroadcastIdField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Fault", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Fault", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class Fault : object
     {
         
@@ -148,335 +200,8 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EitSubmission", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class EitSubmission : object
-    {
-        
-        private string CommentsField;
-        
-        private byte[] DataField;
-        
-        private string DatabaseField;
-        
-        private string InventoryTypeField;
-        
-        private System.Nullable<int> NumberOfRecordsField;
-        
-        private System.Nullable<System.DateTime> SubmitTimeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return this.CommentsField;
-            }
-            set
-            {
-                this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Data
-        {
-            get
-            {
-                return this.DataField;
-            }
-            set
-            {
-                this.DataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Database
-        {
-            get
-            {
-                return this.DatabaseField;
-            }
-            set
-            {
-                this.DatabaseField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string InventoryType
-        {
-            get
-            {
-                return this.InventoryTypeField;
-            }
-            set
-            {
-                this.InventoryTypeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> NumberOfRecords
-        {
-            get
-            {
-                return this.NumberOfRecordsField;
-            }
-            set
-            {
-                this.NumberOfRecordsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> SubmitTime
-        {
-            get
-            {
-                return this.SubmitTimeField;
-            }
-            set
-            {
-                this.SubmitTimeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SubmitInventoryLoadResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SubmitInventoryLoadResponseBody : object
-    {
-        
-        private ILSmartServiceReference.SubmitEitResult EitResultField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SubmitEitResult EitResult
-        {
-            get
-            {
-                return this.EitResultField;
-            }
-            set
-            {
-                this.EitResultField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SubmitEitResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SubmitEitResult : object
-    {
-        
-        private bool EitReceivedField;
-        
-        private bool EmailSentField;
-        
-        private string ErrDescriptionField;
-        
-        private System.Nullable<long> InventoryLoadIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EitReceived
-        {
-            get
-            {
-                return this.EitReceivedField;
-            }
-            set
-            {
-                this.EitReceivedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool EmailSent
-        {
-            get
-            {
-                return this.EmailSentField;
-            }
-            set
-            {
-                this.EmailSentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrDescription
-        {
-            get
-            {
-                return this.ErrDescriptionField;
-            }
-            set
-            {
-                this.ErrDescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> InventoryLoadId
-        {
-            get
-            {
-                return this.InventoryLoadIdField;
-            }
-            set
-            {
-                this.InventoryLoadIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BatchSearch", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class BatchSearch : object
-    {
-        
-        private byte[] DataField;
-        
-        private string fileTypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Data
-        {
-            get
-            {
-                return this.DataField;
-            }
-            set
-            {
-                this.DataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string fileType
-        {
-            get
-            {
-                return this.fileTypeField;
-            }
-            set
-            {
-                this.fileTypeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SubmitBatchSearchResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SubmitBatchSearchResponseBody : object
-    {
-        
-        private ILSmartServiceReference.BatchSearchSubmitResult BatchSearchResultField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.BatchSearchSubmitResult BatchSearchResult
-        {
-            get
-            {
-                return this.BatchSearchResultField;
-            }
-            set
-            {
-                this.BatchSearchResultField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BatchSearchSubmitResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class BatchSearchSubmitResult : object
-    {
-        
-        private System.Nullable<long> BatchSearchIdField;
-        
-        private bool BatchSearchReceivedField;
-        
-        private string ErrDescriptionField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> BatchSearchId
-        {
-            get
-            {
-                return this.BatchSearchIdField;
-            }
-            set
-            {
-                this.BatchSearchIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool BatchSearchReceived
-        {
-            get
-            {
-                return this.BatchSearchReceivedField;
-            }
-            set
-            {
-                this.BatchSearchReceivedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ErrDescription
-        {
-            get
-            {
-                return this.ErrDescriptionField;
-            }
-            set
-            {
-                this.ErrDescriptionField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendMessageBroadcastResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendMessageBroadcastResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="SendMessageBroadcastMobileResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class SendMessageBroadcastMobileResponseBody : object
     {
         
         private ILSmartServiceReference.Fault[] FaultsField;
@@ -512,34 +237,191 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SearchlessPartsRfqInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SearchlessPartsRfqInput : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="IsPartAvailableResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class IsPartAvailableResponseBody : object
     {
         
-        private string CommentField;
+        private ILSmartServiceReference.Fault[] FaultsField;
         
-        private System.Nullable<System.DateTime> DeliverByDateField;
+        private bool IsAvailableField;
         
-        private ILSmartServiceReference.SearchlessPartInput[] PartsField;
-        
-        private string PriorityField;
-        
-        private System.Nullable<int> QuoteWithinDaysField;
-        
-        private string ReferenceNumberField;
-        
-        private string[] SuppliersField;
+        private bool IsAvailableFromSupplierField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comment
+        public ILSmartServiceReference.Fault[] Faults
         {
             get
             {
-                return this.CommentField;
+                return this.FaultsField;
             }
             set
             {
-                this.CommentField = value;
+                this.FaultsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsAvailable
+        {
+            get
+            {
+                return this.IsAvailableField;
+            }
+            set
+            {
+                this.IsAvailableField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsAvailableFromSupplier
+        {
+            get
+            {
+                return this.IsAvailableFromSupplierField;
+            }
+            set
+            {
+                this.IsAvailableFromSupplierField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsSentByDateRangeResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRfqsSentByDateRangeResponseBody : object
+    {
+        
+        private ILSmartServiceReference.Fault[] FaultsField;
+        
+        private ILSmartServiceReference.RfqMobile[] RfqsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Fault[] Faults
+        {
+            get
+            {
+                return this.FaultsField;
+            }
+            set
+            {
+                this.FaultsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RfqMobile[] Rfqs
+        {
+            get
+            {
+                return this.RfqsField;
+            }
+            set
+            {
+                this.RfqsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqMobile", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RfqMobile : object
+    {
+        
+        private ILSmartServiceReference.Attachment[] AttachmentsField;
+        
+        private System.Nullable<System.DateTime> CloseDateField;
+        
+        private string CommentsField;
+        
+        private ILSmartServiceReference.ContactInfo ContactInfoField;
+        
+        private System.Nullable<System.DateTime> CreateDateField;
+        
+        private System.Nullable<System.DateTime> DeliverByDateField;
+        
+        private string EntryCodeField;
+        
+        private ILSmartServiceReference.Priority PriorityField;
+        
+        private long QuoteCountField;
+        
+        private int QuoteWithinDaysField;
+        
+        private string ReferenceNumberField;
+        
+        private ILSmartServiceReference.RequestedItemCollection RequestedItemsField;
+        
+        private System.Nullable<long> RfqIdField;
+        
+        private string StatusField;
+        
+        private System.Nullable<long> ViewedIndicatorField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Attachment[] Attachments
+        {
+            get
+            {
+                return this.AttachmentsField;
+            }
+            set
+            {
+                this.AttachmentsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CloseDate
+        {
+            get
+            {
+                return this.CloseDateField;
+            }
+            set
+            {
+                this.CloseDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comments
+        {
+            get
+            {
+                return this.CommentsField;
+            }
+            set
+            {
+                this.CommentsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.ContactInfo ContactInfo
+        {
+            get
+            {
+                return this.ContactInfoField;
+            }
+            set
+            {
+                this.ContactInfoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreateDate
+        {
+            get
+            {
+                return this.CreateDateField;
+            }
+            set
+            {
+                this.CreateDateField = value;
             }
         }
         
@@ -557,20 +439,20 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SearchlessPartInput[] Parts
+        public string EntryCode
         {
             get
             {
-                return this.PartsField;
+                return this.EntryCodeField;
             }
             set
             {
-                this.PartsField = value;
+                this.EntryCodeField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority
+        public ILSmartServiceReference.Priority Priority
         {
             get
             {
@@ -583,7 +465,20 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> QuoteWithinDays
+        public long QuoteCount
+        {
+            get
+            {
+                return this.QuoteCountField;
+            }
+            set
+            {
+                this.QuoteCountField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuoteWithinDays
         {
             get
             {
@@ -609,45 +504,649 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string[] Suppliers
+        public ILSmartServiceReference.RequestedItemCollection RequestedItems
         {
             get
             {
-                return this.SuppliersField;
+                return this.RequestedItemsField;
             }
             set
             {
-                this.SuppliersField = value;
+                this.RequestedItemsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> RfqId
+        {
+            get
+            {
+                return this.RfqIdField;
+            }
+            set
+            {
+                this.RfqIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status
+        {
+            get
+            {
+                return this.StatusField;
+            }
+            set
+            {
+                this.StatusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> ViewedIndicator
+        {
+            get
+            {
+                return this.ViewedIndicatorField;
+            }
+            set
+            {
+                this.ViewedIndicatorField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SearchlessPartInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SearchlessPartInput : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="ContactInfo", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class ContactInfo : object
     {
         
-        private string AlternatePartNumberField;
+        private ILSmartServiceReference.RfqRecipient rfqRecipientField;
         
-        private string ConditionCodeField;
+        private ILSmartServiceReference.RfqSender rfqSenderField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RfqRecipient rfqRecipient
+        {
+            get
+            {
+                return this.rfqRecipientField;
+            }
+            set
+            {
+                this.rfqRecipientField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RfqSender rfqSender
+        {
+            get
+            {
+                return this.rfqSenderField;
+            }
+            set
+            {
+                this.rfqSenderField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Priority", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Priority : object
+    {
+        
+        private string CodeField;
+        
+        private string NameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Code
+        {
+            get
+            {
+                return this.CodeField;
+            }
+            set
+            {
+                this.CodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RequestedItemCollection", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RequestedItemCollection : object
+    {
+        
+        private ILSmartServiceReference.RfqRequestedPart[] ItemField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RfqRequestedPart[] Item
+        {
+            get
+            {
+                return this.ItemField;
+            }
+            set
+            {
+                this.ItemField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Attachment", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Attachment : object
+    {
+        
+        private System.Nullable<long> DocumentIdField;
+        
+        private string FileNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> DocumentId
+        {
+            get
+            {
+                return this.DocumentIdField;
+            }
+            set
+            {
+                this.DocumentIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FileName
+        {
+            get
+            {
+                return this.FileNameField;
+            }
+            set
+            {
+                this.FileNameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRecipient", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RfqRecipient : object
+    {
+        
+        private ILSmartServiceReference.IlsContact[] IlsContactsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.IlsContact[] IlsContacts
+        {
+            get
+            {
+                return this.IlsContactsField;
+            }
+            set
+            {
+                this.IlsContactsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqSender", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RfqSender : object
+    {
+        
+        private string CompanyNameField;
+        
+        private ILSmartServiceReference.IlsContact IlsContactField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyName
+        {
+            get
+            {
+                return this.CompanyNameField;
+            }
+            set
+            {
+                this.CompanyNameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.IlsContact IlsContact
+        {
+            get
+            {
+                return this.IlsContactField;
+            }
+            set
+            {
+                this.IlsContactField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IlsContact", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class IlsContact : object
+    {
+        
+        private string CompanyIdField;
+        
+        private System.Nullable<long> ContactIdField;
+        
+        private string EmailField;
+        
+        private ILSmartServiceReference.Fax FaxField;
+        
+        private string HomeOfficeIdField;
+        
+        private string NameField;
+        
+        private ILSmartServiceReference.Phone PhoneField;
+        
+        private string TitleField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CompanyId
+        {
+            get
+            {
+                return this.CompanyIdField;
+            }
+            set
+            {
+                this.CompanyIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> ContactId
+        {
+            get
+            {
+                return this.ContactIdField;
+            }
+            set
+            {
+                this.ContactIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Email
+        {
+            get
+            {
+                return this.EmailField;
+            }
+            set
+            {
+                this.EmailField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Fax Fax
+        {
+            get
+            {
+                return this.FaxField;
+            }
+            set
+            {
+                this.FaxField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string HomeOfficeId
+        {
+            get
+            {
+                return this.HomeOfficeIdField;
+            }
+            set
+            {
+                this.HomeOfficeIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name
+        {
+            get
+            {
+                return this.NameField;
+            }
+            set
+            {
+                this.NameField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Phone Phone
+        {
+            get
+            {
+                return this.PhoneField;
+            }
+            set
+            {
+                this.PhoneField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Title
+        {
+            get
+            {
+                return this.TitleField;
+            }
+            set
+            {
+                this.TitleField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Fax", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Fax : object
+    {
+        
+        private System.Nullable<long> CountryCallingCodeField;
+        
+        private string PhoneNumberField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> CountryCallingCode
+        {
+            get
+            {
+                return this.CountryCallingCodeField;
+            }
+            set
+            {
+                this.CountryCallingCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneNumber
+        {
+            get
+            {
+                return this.PhoneNumberField;
+            }
+            set
+            {
+                this.PhoneNumberField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Phone", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Phone : object
+    {
+        
+        private System.Nullable<long> CountryCallingCodeField;
+        
+        private string ExtensionField;
+        
+        private string PhoneNumberField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> CountryCallingCode
+        {
+            get
+            {
+                return this.CountryCallingCodeField;
+            }
+            set
+            {
+                this.CountryCallingCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Extension
+        {
+            get
+            {
+                return this.ExtensionField;
+            }
+            set
+            {
+                this.ExtensionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PhoneNumber
+        {
+            get
+            {
+                return this.PhoneNumberField;
+            }
+            set
+            {
+                this.PhoneNumberField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRequestedPart", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RfqRequestedPart : object
+    {
         
         private string DescriptionField;
+        
+        private System.Nullable<long> ItemIdField;
+        
+        private System.Nullable<short> ItemNumberField;
         
         private string PartNumberField;
         
         private System.Nullable<long> QuantityField;
         
+        private ILSmartServiceReference.SupplierPartListing[] SupplierListingsField;
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AlternatePartNumber
+        public string Description
         {
             get
             {
-                return this.AlternatePartNumberField;
+                return this.DescriptionField;
             }
             set
             {
-                this.AlternatePartNumberField = value;
+                this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> ItemId
+        {
+            get
+            {
+                return this.ItemIdField;
+            }
+            set
+            {
+                this.ItemIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<short> ItemNumber
+        {
+            get
+            {
+                return this.ItemNumberField;
+            }
+            set
+            {
+                this.ItemNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PartNumber
+        {
+            get
+            {
+                return this.PartNumberField;
+            }
+            set
+            {
+                this.PartNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> Quantity
+        {
+            get
+            {
+                return this.QuantityField;
+            }
+            set
+            {
+                this.QuantityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.SupplierPartListing[] SupplierListings
+        {
+            get
+            {
+                return this.SupplierListingsField;
+            }
+            set
+            {
+                this.SupplierListingsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierPartListing", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class SupplierPartListing : object
+    {
+        
+        private ILSmartServiceReference.PartListing[] PartListingsField;
+        
+        private string SupplierIdField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.PartListing[] PartListings
+        {
+            get
+            {
+                return this.PartListingsField;
+            }
+            set
+            {
+                this.PartListingsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string SupplierId
+        {
+            get
+            {
+                return this.SupplierIdField;
+            }
+            set
+            {
+                this.SupplierIdField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PartListing", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PartListing : object
+    {
+        
+        private string AltPartNumberField;
+        
+        private string AltQuantityField;
+        
+        private string ConditionCodeField;
+        
+        private string DescriptionField;
+        
+        private System.Nullable<long> ItemSupplierPartIdField;
+        
+        private string MakerField;
+        
+        private string ModelField;
+        
+        private string PartNumberField;
+        
+        private string QuantityField;
+        
+        private string TraceabilityCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AltPartNumber
+        {
+            get
+            {
+                return this.AltPartNumberField;
+            }
+            set
+            {
+                this.AltPartNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AltQuantity
+        {
+            get
+            {
+                return this.AltQuantityField;
+            }
+            set
+            {
+                this.AltQuantityField = value;
             }
         }
         
@@ -678,6 +1177,45 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> ItemSupplierPartId
+        {
+            get
+            {
+                return this.ItemSupplierPartIdField;
+            }
+            set
+            {
+                this.ItemSupplierPartIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Maker
+        {
+            get
+            {
+                return this.MakerField;
+            }
+            set
+            {
+                this.MakerField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Model
+        {
+            get
+            {
+                return this.ModelField;
+            }
+            set
+            {
+                this.ModelField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string PartNumber
         {
             get
@@ -691,7 +1229,7 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
+        public string Quantity
         {
             get
             {
@@ -702,17 +1240,30 @@ namespace ILSmartServiceReference
                 this.QuantityField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TraceabilityCode
+        {
+            get
+            {
+                return this.TraceabilityCodeField;
+            }
+            set
+            {
+                this.TraceabilityCodeField = value;
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendSearchlessPartRfqResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendSearchlessPartRfqResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsSentByDateRangeMobileResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRfqsSentByDateRangeMobileResponseBody : object
     {
         
         private ILSmartServiceReference.Fault[] FaultsField;
         
-        private ILSmartServiceReference.SendPartsRfqResult RfqResultField;
+        private ILSmartServiceReference.RfqMobile[] RfqsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Fault[] Faults
@@ -728,59 +1279,59 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SendPartsRfqResult RfqResult
+        public ILSmartServiceReference.RfqMobile[] Rfqs
         {
             get
             {
-                return this.RfqResultField;
+                return this.RfqsField;
             }
             set
             {
-                this.RfqResultField = value;
+                this.RfqsField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendPartsRfqResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendPartsRfqResult : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRfqsReceivedByDateResponseBody : object
     {
         
-        private ILSmartServiceReference.NonFatalError[] NonFatalErrorsField;
+        private ILSmartServiceReference.Fault[] FaultsField;
         
-        private ILSmartServiceReference.Rfq RfqField;
+        private ILSmartServiceReference.Rfq[] RfqsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.NonFatalError[] NonFatalErrors
+        public ILSmartServiceReference.Fault[] Faults
         {
             get
             {
-                return this.NonFatalErrorsField;
+                return this.FaultsField;
             }
             set
             {
-                this.NonFatalErrorsField = value;
+                this.FaultsField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq Rfq
+        public ILSmartServiceReference.Rfq[] Rfqs
         {
             get
             {
-                return this.RfqField;
+                return this.RfqsField;
             }
             set
             {
-                this.RfqField = value;
+                this.RfqsField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Rfq", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Rfq", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class Rfq : object
     {
         
@@ -807,10 +1358,6 @@ namespace ILSmartServiceReference
         private ILSmartServiceReference.RequestedItemCollection RequestedItemsField;
         
         private System.Nullable<long> RfqIdField;
-        
-        private string StatusField;
-        
-        private System.Nullable<long> ViewedIndicatorField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Attachment[] Attachments
@@ -967,2457 +1514,11 @@ namespace ILSmartServiceReference
                 this.RfqIdField = value;
             }
         }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status
-        {
-            get
-            {
-                return this.StatusField;
-            }
-            set
-            {
-                this.StatusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ViewedIndicator
-        {
-            get
-            {
-                return this.ViewedIndicatorField;
-            }
-            set
-            {
-                this.ViewedIndicatorField = value;
-            }
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NonFatalError", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class NonFatalError : object
-    {
-        
-        private string MessageField;
-        
-        private string TypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message
-        {
-            get
-            {
-                return this.MessageField;
-            }
-            set
-            {
-                this.MessageField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Type
-        {
-            get
-            {
-                return this.TypeField;
-            }
-            set
-            {
-                this.TypeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ContactInfo", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class ContactInfo : object
-    {
-        
-        private ILSmartServiceReference.RfqRecipient rfqRecipientField;
-        
-        private ILSmartServiceReference.RfqSender rfqSenderField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.RfqRecipient rfqRecipient
-        {
-            get
-            {
-                return this.rfqRecipientField;
-            }
-            set
-            {
-                this.rfqRecipientField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.RfqSender rfqSender
-        {
-            get
-            {
-                return this.rfqSenderField;
-            }
-            set
-            {
-                this.rfqSenderField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Priority", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Priority : object
-    {
-        
-        private string CodeField;
-        
-        private string NameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
-        {
-            get
-            {
-                return this.NameField;
-            }
-            set
-            {
-                this.NameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RequestedItemCollection", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class RequestedItemCollection : object
-    {
-        
-        private ILSmartServiceReference.RfqRequestedPart[] ItemField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.RfqRequestedPart[] Item
-        {
-            get
-            {
-                return this.ItemField;
-            }
-            set
-            {
-                this.ItemField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Attachment", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Attachment : object
-    {
-        
-        private System.Nullable<long> DocumentIdField;
-        
-        private string FileNameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> DocumentId
-        {
-            get
-            {
-                return this.DocumentIdField;
-            }
-            set
-            {
-                this.DocumentIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FileName
-        {
-            get
-            {
-                return this.FileNameField;
-            }
-            set
-            {
-                this.FileNameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRecipient", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class RfqRecipient : object
-    {
-        
-        private ILSmartServiceReference.IlsContact[] IlsContactsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact[] IlsContacts
-        {
-            get
-            {
-                return this.IlsContactsField;
-            }
-            set
-            {
-                this.IlsContactsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RfqSender", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class RfqSender : object
-    {
-        
-        private string CompanyNameField;
-        
-        private ILSmartServiceReference.IlsContact IlsContactField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact IlsContact
-        {
-            get
-            {
-                return this.IlsContactField;
-            }
-            set
-            {
-                this.IlsContactField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IlsContact", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class IlsContact : object
-    {
-        
-        private string CompanyIdField;
-        
-        private System.Nullable<long> ContactIdField;
-        
-        private string EmailField;
-        
-        private ILSmartServiceReference.Fax FaxField;
-        
-        private string NameField;
-        
-        private ILSmartServiceReference.Phone PhoneField;
-        
-        private string TitleField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyId
-        {
-            get
-            {
-                return this.CompanyIdField;
-            }
-            set
-            {
-                this.CompanyIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ContactId
-        {
-            get
-            {
-                return this.ContactIdField;
-            }
-            set
-            {
-                this.ContactIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Email
-        {
-            get
-            {
-                return this.EmailField;
-            }
-            set
-            {
-                this.EmailField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fax Fax
-        {
-            get
-            {
-                return this.FaxField;
-            }
-            set
-            {
-                this.FaxField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
-        {
-            get
-            {
-                return this.NameField;
-            }
-            set
-            {
-                this.NameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Phone Phone
-        {
-            get
-            {
-                return this.PhoneField;
-            }
-            set
-            {
-                this.PhoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Title
-        {
-            get
-            {
-                return this.TitleField;
-            }
-            set
-            {
-                this.TitleField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Fax", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Fax : object
-    {
-        
-        private System.Nullable<long> CountryCallingCodeField;
-        
-        private string PhoneNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> CountryCallingCode
-        {
-            get
-            {
-                return this.CountryCallingCodeField;
-            }
-            set
-            {
-                this.CountryCallingCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber
-        {
-            get
-            {
-                return this.PhoneNumberField;
-            }
-            set
-            {
-                this.PhoneNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Phone", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Phone : object
-    {
-        
-        private System.Nullable<long> CountryCallingCodeField;
-        
-        private string ExtensionField;
-        
-        private string PhoneNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> CountryCallingCode
-        {
-            get
-            {
-                return this.CountryCallingCodeField;
-            }
-            set
-            {
-                this.CountryCallingCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Extension
-        {
-            get
-            {
-                return this.ExtensionField;
-            }
-            set
-            {
-                this.ExtensionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber
-        {
-            get
-            {
-                return this.PhoneNumberField;
-            }
-            set
-            {
-                this.PhoneNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRequestedPart", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class RfqRequestedPart : object
-    {
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemIdField;
-        
-        private System.Nullable<short> ItemNumberField;
-        
-        private string PartNumberField;
-        
-        private System.Nullable<long> QuantityField;
-        
-        private ILSmartServiceReference.SupplierPartListing[] SupplierListingsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemId
-        {
-            get
-            {
-                return this.ItemIdField;
-            }
-            set
-            {
-                this.ItemIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> ItemNumber
-        {
-            get
-            {
-                return this.ItemNumberField;
-            }
-            set
-            {
-                this.ItemNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SupplierPartListing[] SupplierListings
-        {
-            get
-            {
-                return this.SupplierListingsField;
-            }
-            set
-            {
-                this.SupplierListingsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierPartListing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SupplierPartListing : object
-    {
-        
-        private ILSmartServiceReference.PartListing[] PartListingsField;
-        
-        private string SupplierIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartListing[] PartListings
-        {
-            get
-            {
-                return this.PartListingsField;
-            }
-            set
-            {
-                this.PartListingsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierId
-        {
-            get
-            {
-                return this.SupplierIdField;
-            }
-            set
-            {
-                this.SupplierIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartListing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartListing : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string AltQuantityField;
-        
-        private string ConditionCodeField;
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private string MakerField;
-        
-        private string ModelField;
-        
-        private string PartNumberField;
-        
-        private System.Nullable<long> QuantityField;
-        
-        private string TraceabilityCodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltQuantity
-        {
-            get
-            {
-                return this.AltQuantityField;
-            }
-            set
-            {
-                this.AltQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ConditionCode
-        {
-            get
-            {
-                return this.ConditionCodeField;
-            }
-            set
-            {
-                this.ConditionCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Maker
-        {
-            get
-            {
-                return this.MakerField;
-            }
-            set
-            {
-                this.MakerField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Model
-        {
-            get
-            {
-                return this.ModelField;
-            }
-            set
-            {
-                this.ModelField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TraceabilityCode
-        {
-            get
-            {
-                return this.TraceabilityCodeField;
-            }
-            set
-            {
-                this.TraceabilityCodeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuickRfqPartInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuickRfqPartInput : object
-    {
-        
-        private string DescriptionField;
-        
-        private string PartNumberField;
-        
-        private System.Nullable<int> QuantityField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendQuickRfqResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendQuickRfqResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq RfqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq Rfq
-        {
-            get
-            {
-                return this.RfqField;
-            }
-            set
-            {
-                this.RfqField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartsRfqInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartsRfqInput : object
-    {
-        
-        private string CommentField;
-        
-        private System.Nullable<System.DateTime> DeliverByDateField;
-        
-        private ILSmartServiceReference.PartSearchResultInput[] PartsField;
-        
-        private string PriorityField;
-        
-        private int QuoteWithinDaysField;
-        
-        private string ReferenceNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comment
-        {
-            get
-            {
-                return this.CommentField;
-            }
-            set
-            {
-                this.CommentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DeliverByDate
-        {
-            get
-            {
-                return this.DeliverByDateField;
-            }
-            set
-            {
-                this.DeliverByDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartSearchResultInput[] Parts
-        {
-            get
-            {
-                return this.PartsField;
-            }
-            set
-            {
-                this.PartsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority
-        {
-            get
-            {
-                return this.PriorityField;
-            }
-            set
-            {
-                this.PriorityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int QuoteWithinDays
-        {
-            get
-            {
-                return this.QuoteWithinDaysField;
-            }
-            set
-            {
-                this.QuoteWithinDaysField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ReferenceNumber
-        {
-            get
-            {
-                return this.ReferenceNumberField;
-            }
-            set
-            {
-                this.ReferenceNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartSearchResultInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartSearchResultInput : object
-    {
-        
-        private string AlternatePartNumberField;
-        
-        private string BuyerPartDescriptionField;
-        
-        private string ConditionCodeField;
-        
-        private string DescriptionField;
-        
-        private string PartEnteredField;
-        
-        private string PartNumberField;
-        
-        private string QuantityField;
-        
-        private System.Nullable<long> SearchPartIdField;
-        
-        private string SupplierIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AlternatePartNumber
-        {
-            get
-            {
-                return this.AlternatePartNumberField;
-            }
-            set
-            {
-                this.AlternatePartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BuyerPartDescription
-        {
-            get
-            {
-                return this.BuyerPartDescriptionField;
-            }
-            set
-            {
-                this.BuyerPartDescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ConditionCode
-        {
-            get
-            {
-                return this.ConditionCodeField;
-            }
-            set
-            {
-                this.ConditionCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartEntered
-        {
-            get
-            {
-                return this.PartEnteredField;
-            }
-            set
-            {
-                this.PartEnteredField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> SearchPartId
-        {
-            get
-            {
-                return this.SearchPartIdField;
-            }
-            set
-            {
-                this.SearchPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierId
-        {
-            get
-            {
-                return this.SupplierIdField;
-            }
-            set
-            {
-                this.SupplierIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendPartRfqResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendPartRfqResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.SendPartsRfqResult RfqResultField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SendPartsRfqResult RfqResult
-        {
-            get
-            {
-                return this.RfqResultField;
-            }
-            set
-            {
-                this.RfqResultField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartsRfqQuoteInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartsRfqQuoteInput : object
-    {
-        
-        private string CommentsField;
-        
-        private ILSmartServiceReference.QuotedPartInput[] QuoteField;
-        
-        private System.Nullable<long> RfqIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return this.CommentsField;
-            }
-            set
-            {
-                this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedPartInput[] Quote
-        {
-            get
-            {
-                return this.QuoteField;
-            }
-            set
-            {
-                this.QuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> RfqId
-        {
-            get
-            {
-                return this.RfqIdField;
-            }
-            set
-            {
-                this.RfqIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedPartInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedPartInput : object
-    {
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private System.Nullable<bool> NoQuoteField;
-        
-        private ILSmartServiceReference.QuotedPart PartField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> NoQuote
-        {
-            get
-            {
-                return this.NoQuoteField;
-            }
-            set
-            {
-                this.NoQuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedPart Part
-        {
-            get
-            {
-                return this.PartField;
-            }
-            set
-            {
-                this.PartField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedPart", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedPart : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private ILSmartServiceReference.QuotedCondition[] ConditionsField;
-        
-        private string PartNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedCondition[] Conditions
-        {
-            get
-            {
-                return this.ConditionsField;
-            }
-            set
-            {
-                this.ConditionsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedCondition", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedCondition : object
-    {
-        
-        private string ConditionCdField;
-        
-        private string ItemCommentsField;
-        
-        private string LeadTimeField;
-        
-        private System.Nullable<int> MinQuantityField;
-        
-        private System.Nullable<decimal> PriceField;
-        
-        private string PriceTypeField;
-        
-        private System.Nullable<long> QuantityField;
-        
-        private System.Nullable<long> QuoteIdField;
-        
-        private System.Nullable<System.DateTime> TagDateField;
-        
-        private string TraceabilityField;
-        
-        private string UnitOfMeasureField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ConditionCd
-        {
-            get
-            {
-                return this.ConditionCdField;
-            }
-            set
-            {
-                this.ConditionCdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ItemComments
-        {
-            get
-            {
-                return this.ItemCommentsField;
-            }
-            set
-            {
-                this.ItemCommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string LeadTime
-        {
-            get
-            {
-                return this.LeadTimeField;
-            }
-            set
-            {
-                this.LeadTimeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> MinQuantity
-        {
-            get
-            {
-                return this.MinQuantityField;
-            }
-            set
-            {
-                this.MinQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<decimal> Price
-        {
-            get
-            {
-                return this.PriceField;
-            }
-            set
-            {
-                this.PriceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PriceType
-        {
-            get
-            {
-                return this.PriceTypeField;
-            }
-            set
-            {
-                this.PriceTypeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> QuoteId
-        {
-            get
-            {
-                return this.QuoteIdField;
-            }
-            set
-            {
-                this.QuoteIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> TagDate
-        {
-            get
-            {
-                return this.TagDateField;
-            }
-            set
-            {
-                this.TagDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Traceability
-        {
-            get
-            {
-                return this.TraceabilityField;
-            }
-            set
-            {
-                this.TraceabilityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UnitOfMeasure
-        {
-            get
-            {
-                return this.UnitOfMeasureField;
-            }
-            set
-            {
-                this.UnitOfMeasureField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendPartQuotesResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendPartQuotesResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] PartQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] PartQuotes
-        {
-            get
-            {
-                return this.PartQuotesField;
-            }
-            set
-            {
-                this.PartQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartsRfqQuote", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartsRfqQuote : object
-    {
-        
-        private ILSmartServiceReference.Attachment[] AttachmentsField;
-        
-        private ILSmartServiceReference.QuoteRequestedPart[] PartsField;
-        
-        private string ReferenceNumberField;
-        
-        private System.Nullable<long> RfqIdField;
-        
-        private ILSmartServiceReference.SupplierCompany SupplierField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Attachment[] Attachments
-        {
-            get
-            {
-                return this.AttachmentsField;
-            }
-            set
-            {
-                this.AttachmentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuoteRequestedPart[] Parts
-        {
-            get
-            {
-                return this.PartsField;
-            }
-            set
-            {
-                this.PartsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ReferenceNumber
-        {
-            get
-            {
-                return this.ReferenceNumberField;
-            }
-            set
-            {
-                this.ReferenceNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> RfqId
-        {
-            get
-            {
-                return this.RfqIdField;
-            }
-            set
-            {
-                this.RfqIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SupplierCompany Supplier
-        {
-            get
-            {
-                return this.SupplierField;
-            }
-            set
-            {
-                this.SupplierField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierCompany", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SupplierCompany : object
-    {
-        
-        private ILSmartServiceReference.Address CompanyAddressField;
-        
-        private string IdField;
-        
-        private string NameField;
-        
-        private ILSmartServiceReference.IlsContact RfqContactField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Address CompanyAddress
-        {
-            get
-            {
-                return this.CompanyAddressField;
-            }
-            set
-            {
-                this.CompanyAddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
-        {
-            get
-            {
-                return this.NameField;
-            }
-            set
-            {
-                this.NameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact RfqContact
-        {
-            get
-            {
-                return this.RfqContactField;
-            }
-            set
-            {
-                this.RfqContactField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuoteRequestedPart", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuoteRequestedPart : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemIdField;
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private System.Nullable<bool> NoQuoteField;
-        
-        private string PartNumberField;
-        
-        private ILSmartServiceReference.QuotedPart QuoteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemId
-        {
-            get
-            {
-                return this.ItemIdField;
-            }
-            set
-            {
-                this.ItemIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> NoQuote
-        {
-            get
-            {
-                return this.NoQuoteField;
-            }
-            set
-            {
-                this.NoQuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedPart Quote
-        {
-            get
-            {
-                return this.QuoteField;
-            }
-            set
-            {
-                this.QuoteField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Address : object
-    {
-        
-        private string Address1Field;
-        
-        private string Address2Field;
-        
-        private string CityField;
-        
-        private string CountryField;
-        
-        private string PostalCodeField;
-        
-        private string StateProvinceField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address1
-        {
-            get
-            {
-                return this.Address1Field;
-            }
-            set
-            {
-                this.Address1Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address2
-        {
-            get
-            {
-                return this.Address2Field;
-            }
-            set
-            {
-                this.Address2Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City
-        {
-            get
-            {
-                return this.CityField;
-            }
-            set
-            {
-                this.CityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Country
-        {
-            get
-            {
-                return this.CountryField;
-            }
-            set
-            {
-                this.CountryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PostalCode
-        {
-            get
-            {
-                return this.PostalCodeField;
-            }
-            set
-            {
-                this.PostalCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string StateProvince
-        {
-            get
-            {
-                return this.StateProvinceField;
-            }
-            set
-            {
-                this.StateProvinceField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IsPartAvailableResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class IsPartAvailableResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private bool IsAvailableField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsAvailable
-        {
-            get
-            {
-                return this.IsAvailableField;
-            }
-            set
-            {
-                this.IsAvailableField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IsMROPartAvailableResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class IsMROPartAvailableResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private bool IsAvailableField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsAvailable
-        {
-            get
-            {
-                return this.IsAvailableField;
-            }
-            set
-            {
-                this.IsAvailableField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetSupplierDirectoryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetSupplierDirectoryResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.SupplierSearchResult[] SupplierListingsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SupplierSearchResult[] SupplierListings
-        {
-            get
-            {
-                return this.SupplierListingsField;
-            }
-            set
-            {
-                this.SupplierListingsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierSearchResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SupplierSearchResult : object
-    {
-        
-        private ILSmartServiceReference.IlsContact AccountingContactField;
-        
-        private string AssociationField;
-        
-        private string CatalogURLField;
-        
-        private ILSmartServiceReference.Certification[] CertificationsField;
-        
-        private string CityField;
-        
-        private ILSmartServiceReference.IlsContact CompanyContactField;
-        
-        private string CompanyDescField;
-        
-        private string CompanyIDField;
-        
-        private string CompanyNameField;
-        
-        private string CompanyURLField;
-        
-        private string CountryField;
-        
-        private string DetailField;
-        
-        private string DistanceField;
-        
-        private string EmailAddressField;
-        
-        private string LicenseField;
-        
-        private string RepairServiceOfField;
-        
-        private ILSmartServiceReference.IlsContact RfqContactField;
-        
-        private string StateField;
-        
-        private ILSmartServiceReference.IlsContact SupplierContactField;
-        
-        private string SupplierOfField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact AccountingContact
-        {
-            get
-            {
-                return this.AccountingContactField;
-            }
-            set
-            {
-                this.AccountingContactField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Association
-        {
-            get
-            {
-                return this.AssociationField;
-            }
-            set
-            {
-                this.AssociationField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CatalogURL
-        {
-            get
-            {
-                return this.CatalogURLField;
-            }
-            set
-            {
-                this.CatalogURLField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Certification[] Certifications
-        {
-            get
-            {
-                return this.CertificationsField;
-            }
-            set
-            {
-                this.CertificationsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City
-        {
-            get
-            {
-                return this.CityField;
-            }
-            set
-            {
-                this.CityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact CompanyContact
-        {
-            get
-            {
-                return this.CompanyContactField;
-            }
-            set
-            {
-                this.CompanyContactField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyDesc
-        {
-            get
-            {
-                return this.CompanyDescField;
-            }
-            set
-            {
-                this.CompanyDescField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyID
-        {
-            get
-            {
-                return this.CompanyIDField;
-            }
-            set
-            {
-                this.CompanyIDField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyURL
-        {
-            get
-            {
-                return this.CompanyURLField;
-            }
-            set
-            {
-                this.CompanyURLField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Country
-        {
-            get
-            {
-                return this.CountryField;
-            }
-            set
-            {
-                this.CountryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Detail
-        {
-            get
-            {
-                return this.DetailField;
-            }
-            set
-            {
-                this.DetailField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Distance
-        {
-            get
-            {
-                return this.DistanceField;
-            }
-            set
-            {
-                this.DistanceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EmailAddress
-        {
-            get
-            {
-                return this.EmailAddressField;
-            }
-            set
-            {
-                this.EmailAddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string License
-        {
-            get
-            {
-                return this.LicenseField;
-            }
-            set
-            {
-                this.LicenseField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RepairServiceOf
-        {
-            get
-            {
-                return this.RepairServiceOfField;
-            }
-            set
-            {
-                this.RepairServiceOfField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact RfqContact
-        {
-            get
-            {
-                return this.RfqContactField;
-            }
-            set
-            {
-                this.RfqContactField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string State
-        {
-            get
-            {
-                return this.StateField;
-            }
-            set
-            {
-                this.StateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.IlsContact SupplierContact
-        {
-            get
-            {
-                return this.SupplierContactField;
-            }
-            set
-            {
-                this.SupplierContactField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierOf
-        {
-            get
-            {
-                return this.SupplierOfField;
-            }
-            set
-            {
-                this.SupplierOfField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Certification", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Certification : object
-    {
-        
-        private string CodeField;
-        
-        private bool DateRequiredField;
-        
-        private string DescriptionField;
-        
-        private System.DateTime ExpirationDateField;
-        
-        private bool IsAVPCertificationField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Code
-        {
-            get
-            {
-                return this.CodeField;
-            }
-            set
-            {
-                this.CodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool DateRequired
-        {
-            get
-            {
-                return this.DateRequiredField;
-            }
-            set
-            {
-                this.DateRequiredField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime ExpirationDate
-        {
-            get
-            {
-                return this.ExpirationDateField;
-            }
-            set
-            {
-                this.ExpirationDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsAVPCertification
-        {
-            get
-            {
-                return this.IsAVPCertificationField;
-            }
-            set
-            {
-                this.IsAVPCertificationField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq RfqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq Rfq
-        {
-            get
-            {
-                return this.RfqField;
-            }
-            set
-            {
-                this.RfqField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsSentByDateResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqsSentByDateResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq[] RfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq[] Rfqs
-        {
-            get
-            {
-                return this.RfqsField;
-            }
-            set
-            {
-                this.RfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqsReceivedByDateResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq[] RfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq[] Rfqs
-        {
-            get
-            {
-                return this.RfqsField;
-            }
-            set
-            {
-                this.RfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateWithSenderInventoryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateWithSenderInventoryResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetRfqsReceivedByDateWithSenderInventoryResponseBody : object
     {
         
@@ -3454,7 +1555,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RfqWithSenderInventory", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqWithSenderInventory", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class RfqWithSenderInventory : object
     {
         
@@ -3641,7 +1742,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RequestedItemWithSenderInventoryCollection", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RequestedItemWithSenderInventoryCollection", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class RequestedItemWithSenderInventoryCollection : object
     {
         
@@ -3663,7 +1764,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRequestedPartWithSenderInventory", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="RfqRequestedPartWithSenderInventory", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class RfqRequestedPartWithSenderInventory : object
     {
         
@@ -3760,7 +1861,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierPartListingWithSenderQuantity", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierPartListingWithSenderQuantity", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class SupplierPartListingWithSenderQuantity : object
     {
         
@@ -3797,7 +1898,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartListingWithSenderQuantity", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PartListingWithSenderQuantity", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PartListingWithSenderQuantity : object
     {
         
@@ -3817,9 +1918,9 @@ namespace ILSmartServiceReference
         
         private string PartNumberField;
         
-        private System.Nullable<long> QuantityField;
+        private string QuantityField;
         
-        private System.Nullable<long> SenderInventoryQuantityField;
+        private string SenderInventoryQuantityField;
         
         private bool SenderListingInventoryField;
         
@@ -3930,7 +2031,7 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
+        public string Quantity
         {
             get
             {
@@ -3943,7 +2044,7 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> SenderInventoryQuantity
+        public string SenderInventoryQuantity
         {
             get
             {
@@ -3984,7 +2085,313 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqCompanyInformationResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateRangeResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRfqsReceivedByDateRangeResponseBody : object
+    {
+        
+        private ILSmartServiceReference.Fault[] FaultsField;
+        
+        private ILSmartServiceReference.SupplierRfqMobile[] RfqsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Fault[] Faults
+        {
+            get
+            {
+                return this.FaultsField;
+            }
+            set
+            {
+                this.FaultsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.SupplierRfqMobile[] Rfqs
+        {
+            get
+            {
+                return this.RfqsField;
+            }
+            set
+            {
+                this.RfqsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierRfqMobile", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class SupplierRfqMobile : object
+    {
+        
+        private ILSmartServiceReference.Attachment[] AttachmentsField;
+        
+        private System.Nullable<System.DateTime> CloseDateField;
+        
+        private string CommentsField;
+        
+        private ILSmartServiceReference.ContactInfo ContactInfoField;
+        
+        private System.Nullable<System.DateTime> CreateDateField;
+        
+        private System.Nullable<System.DateTime> DeliverByDateField;
+        
+        private string EntryCodeField;
+        
+        private bool IsNoQuotedField;
+        
+        private bool IsQuotedField;
+        
+        private ILSmartServiceReference.Priority PriorityField;
+        
+        private int QuoteWithinDaysField;
+        
+        private string ReferenceNumberField;
+        
+        private ILSmartServiceReference.RequestedItemCollection RequestedItemsField;
+        
+        private System.Nullable<long> RfqIdField;
+        
+        private string StatusField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Attachment[] Attachments
+        {
+            get
+            {
+                return this.AttachmentsField;
+            }
+            set
+            {
+                this.AttachmentsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CloseDate
+        {
+            get
+            {
+                return this.CloseDateField;
+            }
+            set
+            {
+                this.CloseDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Comments
+        {
+            get
+            {
+                return this.CommentsField;
+            }
+            set
+            {
+                this.CommentsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.ContactInfo ContactInfo
+        {
+            get
+            {
+                return this.ContactInfoField;
+            }
+            set
+            {
+                this.ContactInfoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> CreateDate
+        {
+            get
+            {
+                return this.CreateDateField;
+            }
+            set
+            {
+                this.CreateDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> DeliverByDate
+        {
+            get
+            {
+                return this.DeliverByDateField;
+            }
+            set
+            {
+                this.DeliverByDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string EntryCode
+        {
+            get
+            {
+                return this.EntryCodeField;
+            }
+            set
+            {
+                this.EntryCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsNoQuoted
+        {
+            get
+            {
+                return this.IsNoQuotedField;
+            }
+            set
+            {
+                this.IsNoQuotedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsQuoted
+        {
+            get
+            {
+                return this.IsQuotedField;
+            }
+            set
+            {
+                this.IsQuotedField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Priority Priority
+        {
+            get
+            {
+                return this.PriorityField;
+            }
+            set
+            {
+                this.PriorityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int QuoteWithinDays
+        {
+            get
+            {
+                return this.QuoteWithinDaysField;
+            }
+            set
+            {
+                this.QuoteWithinDaysField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ReferenceNumber
+        {
+            get
+            {
+                return this.ReferenceNumberField;
+            }
+            set
+            {
+                this.ReferenceNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RequestedItemCollection RequestedItems
+        {
+            get
+            {
+                return this.RequestedItemsField;
+            }
+            set
+            {
+                this.RequestedItemsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<long> RfqId
+        {
+            get
+            {
+                return this.RfqIdField;
+            }
+            set
+            {
+                this.RfqIdField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Status
+        {
+            get
+            {
+                return this.StatusField;
+            }
+            set
+            {
+                this.StatusField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsReceivedByDateRangeMobileResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRfqsReceivedByDateRangeMobileResponseBody : object
+    {
+        
+        private ILSmartServiceReference.Fault[] FaultsField;
+        
+        private ILSmartServiceReference.SupplierRfqMobile[] RfqsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.Fault[] Faults
+        {
+            get
+            {
+                return this.FaultsField;
+            }
+            set
+            {
+                this.FaultsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.SupplierRfqMobile[] Rfqs
+        {
+            get
+            {
+                return this.RfqsField;
+            }
+            set
+            {
+                this.RfqsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqCompanyInformationResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetRfqCompanyInformationResponseBody : object
     {
         
@@ -4021,7 +2428,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Company", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class Company : object
     {
         
@@ -4163,26 +2570,110 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqAttachedDocumentsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqAttachedDocumentsResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="Address", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class Address : object
     {
         
-        private ILSmartServiceReference.Document[] DocumentField;
+        private string Address1Field;
         
-        private ILSmartServiceReference.Fault[] FaultsField;
+        private string Address2Field;
+        
+        private string CityField;
+        
+        private string CountryField;
+        
+        private string PostalCodeField;
+        
+        private string StateProvinceField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Document[] Document
+        public string Address1
         {
             get
             {
-                return this.DocumentField;
+                return this.Address1Field;
             }
             set
             {
-                this.DocumentField = value;
+                this.Address1Field = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address2
+        {
+            get
+            {
+                return this.Address2Field;
+            }
+            set
+            {
+                this.Address2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City
+        {
+            get
+            {
+                return this.CityField;
+            }
+            set
+            {
+                this.CityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Country
+        {
+            get
+            {
+                return this.CountryField;
+            }
+            set
+            {
+                this.CountryField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PostalCode
+        {
+            get
+            {
+                return this.PostalCodeField;
+            }
+            set
+            {
+                this.PostalCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string StateProvince
+        {
+            get
+            {
+                return this.StateProvinceField;
+            }
+            set
+            {
+                this.StateProvinceField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetRetailPricingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetRetailPricingResponseBody : object
+    {
+        
+        private ILSmartServiceReference.Fault[] FaultsField;
+        
+        private ILSmartServiceReference.RetailPricing[] RetailPricingField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Fault[] Faults
@@ -4196,84 +2687,142 @@ namespace ILSmartServiceReference
                 this.FaultsField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RetailPricing[] RetailPricing
+        {
+            get
+            {
+                return this.RetailPricingField;
+            }
+            set
+            {
+                this.RetailPricingField = value;
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Document", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Document : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="RetailPricing", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class RetailPricing : object
     {
         
-        private byte[] ContentField;
+        private string DescriptionField;
         
-        private System.Nullable<long> IdField;
+        private string ManufacturerField;
         
-        private string NameField;
+        private string PartNumberField;
         
-        private string TypeField;
+        private string PriceField;
+        
+        private string TechCharField;
+        
+        private string UOMField;
+        
+        private System.Nullable<System.DateTime> UpdateDateField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public byte[] Content
+        public string Description
         {
             get
             {
-                return this.ContentField;
+                return this.DescriptionField;
             }
             set
             {
-                this.ContentField = value;
+                this.DescriptionField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Id
+        public string Manufacturer
         {
             get
             {
-                return this.IdField;
+                return this.ManufacturerField;
             }
             set
             {
-                this.IdField = value;
+                this.ManufacturerField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Name
+        public string PartNumber
         {
             get
             {
-                return this.NameField;
+                return this.PartNumberField;
             }
             set
             {
-                this.NameField = value;
+                this.PartNumberField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Type
+        public string Price
         {
             get
             {
-                return this.TypeField;
+                return this.PriceField;
             }
             set
             {
-                this.TypeField = value;
+                this.PriceField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TechChar
+        {
+            get
+            {
+                return this.TechCharField;
+            }
+            set
+            {
+                this.TechCharField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UOM
+        {
+            get
+            {
+                return this.UOMField;
+            }
+            set
+            {
+                this.UOMField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> UpdateDate
+        {
+            get
+            {
+                return this.UpdateDateField;
+            }
+            set
+            {
+                this.UpdateDateField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPreferredVendorGroupsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPreferredVendorGroupsResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPmaDataResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetPmaDataResponseBody : object
     {
         
         private ILSmartServiceReference.Fault[] FaultsField;
         
-        private ILSmartServiceReference.PreferredVendorGroup[] PreferredVendorGroupsField;
+        private ILSmartServiceReference.PmaSearchResult[] PmaSearchResultField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Fault[] Faults
@@ -4289,59 +2838,342 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PreferredVendorGroup[] PreferredVendorGroups
+        public ILSmartServiceReference.PmaSearchResult[] PmaSearchResult
         {
             get
             {
-                return this.PreferredVendorGroupsField;
+                return this.PmaSearchResultField;
             }
             set
             {
-                this.PreferredVendorGroupsField = value;
+                this.PmaSearchResultField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PreferredVendorGroup", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PreferredVendorGroup : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="PmaSearchResult", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PmaSearchResult : object
     {
         
-        private System.Nullable<long> PvgIdField;
+        private string CompressedPartNumberField;
         
-        private string PvgNameField;
+        private ILSmartServiceReference.PmaHolder PmaHolderField;
+        
+        private ILSmartServiceReference.PmaOem[] PmaOemsField;
+        
+        private ILSmartServiceReference.PmaPart[] PmaPartsField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> PvgId
+        public string CompressedPartNumber
         {
             get
             {
-                return this.PvgIdField;
+                return this.CompressedPartNumberField;
             }
             set
             {
-                this.PvgIdField = value;
+                this.CompressedPartNumberField = value;
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PvgName
+        public ILSmartServiceReference.PmaHolder PmaHolder
         {
             get
             {
-                return this.PvgNameField;
+                return this.PmaHolderField;
             }
             set
             {
-                this.PvgNameField = value;
+                this.PmaHolderField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.PmaOem[] PmaOems
+        {
+            get
+            {
+                return this.PmaOemsField;
+            }
+            set
+            {
+                this.PmaOemsField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.PmaPart[] PmaParts
+        {
+            get
+            {
+                return this.PmaPartsField;
+            }
+            set
+            {
+                this.PmaPartsField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartStatsAndPricingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PmaHolder", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PmaHolder : object
+    {
+        
+        private ILSmartServiceReference.PmaAddress AddressField;
+        
+        private System.Nullable<System.DateTime> ApprovalDateField;
+        
+        private string ApprovalMeansField;
+        
+        private string DescriptionField;
+        
+        private string MidoField;
+        
+        private string PmaHolderNameField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.PmaAddress Address
+        {
+            get
+            {
+                return this.AddressField;
+            }
+            set
+            {
+                this.AddressField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> ApprovalDate
+        {
+            get
+            {
+                return this.ApprovalDateField;
+            }
+            set
+            {
+                this.ApprovalDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ApprovalMeans
+        {
+            get
+            {
+                return this.ApprovalMeansField;
+            }
+            set
+            {
+                this.ApprovalMeansField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.DescriptionField;
+            }
+            set
+            {
+                this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mido
+        {
+            get
+            {
+                return this.MidoField;
+            }
+            set
+            {
+                this.MidoField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PmaHolderName
+        {
+            get
+            {
+                return this.PmaHolderNameField;
+            }
+            set
+            {
+                this.PmaHolderNameField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PmaOem", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PmaOem : object
+    {
+        
+        private string ModelEligibilityField;
+        
+        private string OemPartField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ModelEligibility
+        {
+            get
+            {
+                return this.ModelEligibilityField;
+            }
+            set
+            {
+                this.ModelEligibilityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string OemPart
+        {
+            get
+            {
+                return this.OemPartField;
+            }
+            set
+            {
+                this.OemPartField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PmaPart", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PmaPart : object
+    {
+        
+        private System.Nullable<int> ItemNumberField;
+        
+        private string PartNumberField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> ItemNumber
+        {
+            get
+            {
+                return this.ItemNumberField;
+            }
+            set
+            {
+                this.ItemNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PartNumber
+        {
+            get
+            {
+                return this.PartNumberField;
+            }
+            set
+            {
+                this.PartNumberField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PmaAddress", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class PmaAddress : object
+    {
+        
+        private string Address1Field;
+        
+        private string Address2Field;
+        
+        private string CityField;
+        
+        private string StateField;
+        
+        private string ZipCodeField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address1
+        {
+            get
+            {
+                return this.Address1Field;
+            }
+            set
+            {
+                this.Address1Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Address2
+        {
+            get
+            {
+                return this.Address2Field;
+            }
+            set
+            {
+                this.Address2Field = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string City
+        {
+            get
+            {
+                return this.CityField;
+            }
+            set
+            {
+                this.CityField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string State
+        {
+            get
+            {
+                return this.StateField;
+            }
+            set
+            {
+                this.StateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ZipCode
+        {
+            get
+            {
+                return this.ZipCodeField;
+            }
+            set
+            {
+                this.ZipCodeField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartStatsAndPricingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetPartStatsAndPricingResponseBody : object
     {
         
@@ -4378,17 +3210,21 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartStatsAndPricing", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PartStatsAndPricing", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PartStatsAndPricing : object
     {
         
         private ILSmartServiceReference.InventoryStats[] InventoryStatsCollectionField;
+        
+        private ILSmartServiceReference.MROQuoteHistory[] MROQuoteHistoryCollectionField;
         
         private ILSmartServiceReference.OverhaulStats[] OverhaulStatsCollectionField;
         
         private ILSmartServiceReference.PublishedPricing[] PublishedPricingCollectionField;
         
         private ILSmartServiceReference.QuoteHistory[] QuoteHistoryCollectionField;
+        
+        private ILSmartServiceReference.RetailPricing[] RetailPricingCollectionField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.InventoryStats[] InventoryStatsCollection
@@ -4400,6 +3236,19 @@ namespace ILSmartServiceReference
             set
             {
                 this.InventoryStatsCollectionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.MROQuoteHistory[] MROQuoteHistoryCollection
+        {
+            get
+            {
+                return this.MROQuoteHistoryCollectionField;
+            }
+            set
+            {
+                this.MROQuoteHistoryCollectionField = value;
             }
         }
         
@@ -4441,11 +3290,24 @@ namespace ILSmartServiceReference
                 this.QuoteHistoryCollectionField = value;
             }
         }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.RetailPricing[] RetailPricingCollection
+        {
+            get
+            {
+                return this.RetailPricingCollectionField;
+            }
+            set
+            {
+                this.RetailPricingCollectionField = value;
+            }
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="InventoryStats", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="InventoryStats", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class InventoryStats : object
     {
         
@@ -4662,7 +3524,119 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="OverhaulStats", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MROQuoteHistory", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class MROQuoteHistory : object
+    {
+        
+        private string CostPlusField;
+        
+        private string DescriptionField;
+        
+        private string PartNumberField;
+        
+        private System.Nullable<System.DateTime> QuoteDateField;
+        
+        private string QuotePriceField;
+        
+        private string ServiceCodeField;
+        
+        private string TATField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string CostPlus
+        {
+            get
+            {
+                return this.CostPlusField;
+            }
+            set
+            {
+                this.CostPlusField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description
+        {
+            get
+            {
+                return this.DescriptionField;
+            }
+            set
+            {
+                this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string PartNumber
+        {
+            get
+            {
+                return this.PartNumberField;
+            }
+            set
+            {
+                this.PartNumberField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<System.DateTime> QuoteDate
+        {
+            get
+            {
+                return this.QuoteDateField;
+            }
+            set
+            {
+                this.QuoteDateField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string QuotePrice
+        {
+            get
+            {
+                return this.QuotePriceField;
+            }
+            set
+            {
+                this.QuotePriceField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ServiceCode
+        {
+            get
+            {
+                return this.ServiceCodeField;
+            }
+            set
+            {
+                this.ServiceCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string TAT
+        {
+            get
+            {
+                return this.TATField;
+            }
+            set
+            {
+                this.TATField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OverhaulStats", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class OverhaulStats : object
     {
         
@@ -4789,7 +3763,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PublishedPricing", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PublishedPricing", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PublishedPricing : object
     {
         
@@ -4916,7 +3890,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuoteHistory", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="QuoteHistory", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class QuoteHistory : object
     {
         
@@ -5028,7 +4002,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartsAvailabilityResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartsAvailabilityResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetPartsAvailabilityResponseBody : object
     {
         
@@ -5065,7 +4039,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartListings", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PartListings", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PartListings : object
     {
         
@@ -5102,7 +4076,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartSearchResult", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PartSearchResult", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PartSearchResult : object
     {
         
@@ -5111,6 +4085,8 @@ namespace ILSmartServiceReference
         private string ConditionCodeField;
         
         private string DescriptionField;
+        
+        private string ExchangeOptionField;
         
         private System.Nullable<bool> IsGListingField;
         
@@ -5166,6 +4142,19 @@ namespace ILSmartServiceReference
             set
             {
                 this.DescriptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExchangeOption
+        {
+            get
+            {
+                return this.ExchangeOptionField;
+            }
+            set
+            {
+                this.ExchangeOptionField = value;
             }
         }
         
@@ -5289,7 +4278,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartsAvailabilityMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartsAvailabilityMobileResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetPartsAvailabilityMobileResponseBody : object
     {
         
@@ -5326,192 +4315,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartQuotesResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartQuotesResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] PartQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] PartQuotes
-        {
-            get
-            {
-                return this.PartQuotesField;
-            }
-            set
-            {
-                this.PartQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartQuotesByDateResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartQuotesByDateResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] PartQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] PartQuotes
-        {
-            get
-            {
-                return this.PartQuotesField;
-            }
-            set
-            {
-                this.PartQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartQuoteHistoryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartQuoteHistoryResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.QuoteHistory[] QuoteHistoryField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuoteHistory[] QuoteHistory
-        {
-            get
-            {
-                return this.QuoteHistoryField;
-            }
-            set
-            {
-                this.QuoteHistoryField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartPublishedPricingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartPublishedPricingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PublishedPricing[] PublishedPricingField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PublishedPricing[] PublishedPricing
-        {
-            get
-            {
-                return this.PublishedPricingField;
-            }
-            set
-            {
-                this.PublishedPricingField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartOverhaulStatsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartOverhaulStatsResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.OverhaulStats[] OverhaulStatsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.OverhaulStats[] OverhaulStats
-        {
-            get
-            {
-                return this.OverhaulStatsField;
-            }
-            set
-            {
-                this.OverhaulStatsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartListingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetPartListingResponseBody : object
     {
         
@@ -5548,7 +4352,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPart", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPart", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPart : object
     {
         
@@ -5565,6 +4369,8 @@ namespace ILSmartServiceReference
         private string ControlCodeField;
         
         private string DescriptionField;
+        
+        private string ExchangeOptionField;
         
         private string ListCodeField;
         
@@ -5670,6 +4476,19 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExchangeOption
+        {
+            get
+            {
+                return this.ExchangeOptionField;
+            }
+            set
+            {
+                this.ExchangeOptionField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string ListCode
         {
             get
@@ -5750,7 +4569,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartDetailFields", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartDetailFields", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPartDetailFields : object
     {
         
@@ -5847,297 +4666,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartInventorySummaryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartInventorySummaryResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartInventorySummaryResult[] PartInventorySummaryResultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartInventorySummaryResult[] PartInventorySummaryResults
-        {
-            get
-            {
-                return this.PartInventorySummaryResultsField;
-            }
-            set
-            {
-                this.PartInventorySummaryResultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartInventorySummaryResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartInventorySummaryResult : object
-    {
-        
-        private string ARQuantityField;
-        
-        private string AltPartNumberField;
-        
-        private string DescriptionField;
-        
-        private string NEQuantityField;
-        
-        private string NSQuantityField;
-        
-        private string OHQuantityField;
-        
-        private string PartNumberField;
-        
-        private string SVQuantityField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ARQuantity
-        {
-            get
-            {
-                return this.ARQuantityField;
-            }
-            set
-            {
-                this.ARQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NEQuantity
-        {
-            get
-            {
-                return this.NEQuantityField;
-            }
-            set
-            {
-                this.NEQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string NSQuantity
-        {
-            get
-            {
-                return this.NSQuantityField;
-            }
-            set
-            {
-                this.NSQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string OHQuantity
-        {
-            get
-            {
-                return this.OHQuantityField;
-            }
-            set
-            {
-                this.OHQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SVQuantity
-        {
-            get
-            {
-                return this.SVQuantityField;
-            }
-            set
-            {
-                this.SVQuantityField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartInventoryStatsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartInventoryStatsResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.InventoryStats[] InventoryStatsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.InventoryStats[] InventoryStats
-        {
-            get
-            {
-                return this.InventoryStatsField;
-            }
-            set
-            {
-                this.InventoryStatsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNiinsByPartResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetNiinsByPartResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.NiinListing[] NiinListingsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.NiinListing[] NiinListings
-        {
-            get
-            {
-                return this.NiinListingsField;
-            }
-            set
-            {
-                this.NiinListingsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NiinListing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class NiinListing : object
-    {
-        
-        private string FscField;
-        
-        private string ItemNameField;
-        
-        private string NiinField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Fsc
-        {
-            get
-            {
-                return this.FscField;
-            }
-            set
-            {
-                this.FscField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ItemName
-        {
-            get
-            {
-                return this.ItemNameField;
-            }
-            set
-            {
-                this.ItemNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Niin
-        {
-            get
-            {
-                return this.NiinField;
-            }
-            set
-            {
-                this.NiinField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewRfqsReceivedResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewRfqsReceivedResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetNewRfqsReceivedResponseBody : object
     {
         
@@ -6174,7 +4703,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewRfqsReceivedWithSenderInventoryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewRfqsReceivedWithSenderInventoryResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetNewRfqsReceivedWithSenderInventoryResponseBody : object
     {
         
@@ -6211,13 +4740,13 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewPartQuotesReceivedResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetNewPartQuotesReceivedResponseBody : object
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetMROQuoteHistoryResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class GetMROQuoteHistoryResponseBody : object
     {
         
         private ILSmartServiceReference.Fault[] FaultsField;
         
-        private ILSmartServiceReference.NewPartQuotesReceivedCollection PartQuotesField;
+        private ILSmartServiceReference.MROQuoteHistory[] MROQuoteHistoryField;
         
         [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.Fault[] Faults
@@ -6233,289 +4762,22 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.NewPartQuotesReceivedCollection PartQuotes
+        public ILSmartServiceReference.MROQuoteHistory[] MROQuoteHistory
         {
             get
             {
-                return this.PartQuotesField;
+                return this.MROQuoteHistoryField;
             }
             set
             {
-                this.PartQuotesField = value;
+                this.MROQuoteHistoryField = value;
             }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NewPartQuotesReceivedCollection", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class NewPartQuotesReceivedCollection : object
-    {
-        
-        private bool MoreQuotesAvailableField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] QuoteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool MoreQuotesAvailable
-        {
-            get
-            {
-                return this.MoreQuotesAvailableField;
-            }
-            set
-            {
-                this.MoreQuotesAvailableField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] Quote
-        {
-            get
-            {
-                return this.QuoteField;
-            }
-            set
-            {
-                this.QuoteField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMrosAvailabilityResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMrosAvailabilityResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroListings[] MroListingsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroListings[] MroListings
-        {
-            get
-            {
-                return this.MroListingsField;
-            }
-            set
-            {
-                this.MroListingsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroListings", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroListings : object
-    {
-        
-        private ILSmartServiceReference.Company CompanyField;
-        
-        private ILSmartServiceReference.MroSearchResult[] MrosField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Company Company
-        {
-            get
-            {
-                return this.CompanyField;
-            }
-            set
-            {
-                this.CompanyField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroSearchResult[] Mros
-        {
-            get
-            {
-                return this.MrosField;
-            }
-            set
-            {
-                this.MrosField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroSearchResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroSearchResult : object
-    {
-        
-        private string AlternatePartNumberField;
-        
-        private string DescriptionField;
-        
-        private bool IsPreferredVendorField;
-        
-        private string PartNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AlternatePartNumber
-        {
-            get
-            {
-                return this.AlternatePartNumberField;
-            }
-            set
-            {
-                this.AlternatePartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsPreferredVendor
-        {
-            get
-            {
-                return this.IsPreferredVendorField;
-            }
-            set
-            {
-                this.IsPreferredVendorField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMROPartInventorySummaryResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMROPartInventorySummaryResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartMROInventorySummaryResult[] PartMROInventorySummaryResultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartMROInventorySummaryResult[] PartMROInventorySummaryResults
-        {
-            get
-            {
-                return this.PartMROInventorySummaryResultsField;
-            }
-            set
-            {
-                this.PartMROInventorySummaryResultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartMROInventorySummaryResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartMROInventorySummaryResult : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string DescriptionField;
-        
-        private string PartNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetGovernmentDataResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GetGovernmentDataResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GetGovernmentDataResponseBody : object
     {
         
@@ -6552,7 +4814,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GovernmentDataSearchResults", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="GovernmentDataSearchResults", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class GovernmentDataSearchResults : object
     {
         
@@ -6563,6 +4825,8 @@ namespace ILSmartServiceReference
         private ILSmartServiceReference.CrossRefFile CrossReferenceDataField;
         
         private ILSmartServiceReference.IntAndSubItems DisDataField;
+        
+        private ILSmartServiceReference.DlaData DlaDataField;
         
         private ILSmartServiceReference.EndItemIdentification EndItemIdentificationField;
         
@@ -6591,8 +4855,6 @@ namespace ILSmartServiceReference
         private ILSmartServiceReference.NsnInfo NsnInfoField;
         
         private ILSmartServiceReference.PhraseCode PhraseCodeField;
-        
-        private ILSmartServiceReference.PmaSearchResult[] PmaSearchResultsField;
         
         private ILSmartServiceReference.ProcurementHistoryData ProcurementHistoryDataField;
         
@@ -6647,6 +4909,19 @@ namespace ILSmartServiceReference
             set
             {
                 this.DisDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.DlaData DlaData
+        {
+            get
+            {
+                return this.DlaDataField;
+            }
+            set
+            {
+                this.DlaDataField = value;
             }
         }
         
@@ -6833,19 +5108,6 @@ namespace ILSmartServiceReference
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PmaSearchResult[] PmaSearchResults
-        {
-            get
-            {
-                return this.PmaSearchResultsField;
-            }
-            set
-            {
-                this.PmaSearchResultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public ILSmartServiceReference.ProcurementHistoryData ProcurementHistoryData
         {
             get
@@ -6874,7 +5136,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AmdfData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AmdfData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AmdfData : object
     {
         
@@ -6896,7 +5158,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CrossRefFile", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CrossRefFile", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class CrossRefFile : object
     {
         
@@ -6918,7 +5180,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IntAndSubItems", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IntAndSubItems", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class IntAndSubItems : object
     {
         
@@ -6940,7 +5202,29 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EndItemIdentification", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DlaData", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class DlaData : object
+    {
+        
+        private ILSmartServiceReference.DlaItem[] DlaItemsField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public ILSmartServiceReference.DlaItem[] DlaItems
+        {
+            get
+            {
+                return this.DlaItemsField;
+            }
+            set
+            {
+                this.DlaItemsField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EndItemIdentification", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class EndItemIdentification : object
     {
         
@@ -6962,7 +5246,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HistoricalAltNsn", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HistoricalAltNsn", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class HistoricalAltNsn : object
     {
         
@@ -6984,7 +5268,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mcrl", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Mcrl", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class Mcrl : object
     {
         
@@ -7006,7 +5290,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MlcItems", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MlcItems", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MlcItems : object
     {
         
@@ -7028,7 +5312,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MoeData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MoeData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MoeData : object
     {
         
@@ -7050,7 +5334,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MrilData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MrilData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MrilData : object
     {
         
@@ -7072,7 +5356,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NhaData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NhaData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class NhaData : object
     {
         
@@ -7109,7 +5393,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NsnInfo", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NsnInfo", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class NsnInfo : object
     {
         
@@ -7131,7 +5415,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PhraseCode", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PhraseCode", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PhraseCode : object
     {
         
@@ -7153,7 +5437,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ProcurementHistoryData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProcurementHistoryData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class ProcurementHistoryData : object
     {
         
@@ -7175,7 +5459,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="TcData", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="TcData", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class TcData : object
     {
         
@@ -7272,7 +5556,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AirForceIntAndSubItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AirForceIntAndSubItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AirForceIntAndSubItem : object
     {
         
@@ -7339,74 +5623,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PmaSearchResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PmaSearchResult : object
-    {
-        
-        private string CompressedPartNumberField;
-        
-        private ILSmartServiceReference.PmaHolder PmaHolderField;
-        
-        private ILSmartServiceReference.PmaOem[] PmaOemsField;
-        
-        private ILSmartServiceReference.PmaPart[] PmaPartsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompressedPartNumber
-        {
-            get
-            {
-                return this.CompressedPartNumberField;
-            }
-            set
-            {
-                this.CompressedPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PmaHolder PmaHolder
-        {
-            get
-            {
-                return this.PmaHolderField;
-            }
-            set
-            {
-                this.PmaHolderField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PmaOem[] PmaOems
-        {
-            get
-            {
-                return this.PmaOemsField;
-            }
-            set
-            {
-                this.PmaOemsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PmaPart[] PmaParts
-        {
-            get
-            {
-                return this.PmaPartsField;
-            }
-            set
-            {
-                this.PmaPartsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ArmyMasterDataFilesItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ArmyMasterDataFilesItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class ArmyMasterDataFilesItem : object
     {
         
@@ -7773,7 +5990,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CrossRefFileItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CrossRefFileItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class CrossRefFileItem : object
     {
         
@@ -7825,7 +6042,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="IntAndSubItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="IntAndSubItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class IntAndSubItem : object
     {
         
@@ -7922,7 +6139,239 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="EndItemIdentificationItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DlaItem", Namespace="http://namespace.ilsmart.com/v2")]
+    public partial class DlaItem : object
+    {
+        
+        private string AprField;
+        
+        private string AugField;
+        
+        private string DecField;
+        
+        private string FebField;
+        
+        private string FscField;
+        
+        private string JanField;
+        
+        private string JulField;
+        
+        private string JunField;
+        
+        private string MarField;
+        
+        private string MayField;
+        
+        private string NiinField;
+        
+        private string NovField;
+        
+        private string OctField;
+        
+        private string SepField;
+        
+        private string YearField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Apr
+        {
+            get
+            {
+                return this.AprField;
+            }
+            set
+            {
+                this.AprField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Aug
+        {
+            get
+            {
+                return this.AugField;
+            }
+            set
+            {
+                this.AugField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Dec
+        {
+            get
+            {
+                return this.DecField;
+            }
+            set
+            {
+                this.DecField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Feb
+        {
+            get
+            {
+                return this.FebField;
+            }
+            set
+            {
+                this.FebField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Fsc
+        {
+            get
+            {
+                return this.FscField;
+            }
+            set
+            {
+                this.FscField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Jan
+        {
+            get
+            {
+                return this.JanField;
+            }
+            set
+            {
+                this.JanField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Jul
+        {
+            get
+            {
+                return this.JulField;
+            }
+            set
+            {
+                this.JulField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Jun
+        {
+            get
+            {
+                return this.JunField;
+            }
+            set
+            {
+                this.JunField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Mar
+        {
+            get
+            {
+                return this.MarField;
+            }
+            set
+            {
+                this.MarField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string May
+        {
+            get
+            {
+                return this.MayField;
+            }
+            set
+            {
+                this.MayField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Niin
+        {
+            get
+            {
+                return this.NiinField;
+            }
+            set
+            {
+                this.NiinField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Nov
+        {
+            get
+            {
+                return this.NovField;
+            }
+            set
+            {
+                this.NovField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Oct
+        {
+            get
+            {
+                return this.OctField;
+            }
+            set
+            {
+                this.OctField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Sep
+        {
+            get
+            {
+                return this.SepField;
+            }
+            set
+            {
+                this.SepField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Year
+        {
+            get
+            {
+                return this.YearField;
+            }
+            set
+            {
+                this.YearField = value;
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="EndItemIdentificationItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class EndItemIdentificationItem : object
     {
         
@@ -7974,7 +6423,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HistoricalAltNsnItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="HistoricalAltNsnItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class HistoricalAltNsnItem : object
     {
         
@@ -8071,7 +6520,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="McrlItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="McrlItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class McrlItem : object
     {
         
@@ -8183,7 +6632,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MlcItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MlcItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MlcItem : object
     {
         
@@ -8400,7 +6849,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MajorOrgEntityRule", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MajorOrgEntityRule", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MajorOrgEntityRule : object
     {
         
@@ -8557,7 +7006,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MrilItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="MrilItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class MrilItem : object
     {
         
@@ -8699,7 +7148,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NextHigherAssembly2300", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NextHigherAssembly2300", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class NextHigherAssembly2300 : object
     {
         
@@ -8961,7 +7410,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NextHigherAssembly2330", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NextHigherAssembly2330", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class NextHigherAssembly2330 : object
     {
         
@@ -9043,7 +7492,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="NsnInfoItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="NsnInfoItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class NsnInfoItem : object
     {
         
@@ -9245,7 +7694,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PcItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PcItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class PcItem : object
     {
         
@@ -9357,260 +7806,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PmaHolder", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PmaHolder : object
-    {
-        
-        private ILSmartServiceReference.PmaAddress AddressField;
-        
-        private System.Nullable<System.DateTime> ApprovalDateField;
-        
-        private string ApprovalMeansField;
-        
-        private string DescriptionField;
-        
-        private string MidoField;
-        
-        private string PmaHolderNameField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PmaAddress Address
-        {
-            get
-            {
-                return this.AddressField;
-            }
-            set
-            {
-                this.AddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> ApprovalDate
-        {
-            get
-            {
-                return this.ApprovalDateField;
-            }
-            set
-            {
-                this.ApprovalDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ApprovalMeans
-        {
-            get
-            {
-                return this.ApprovalMeansField;
-            }
-            set
-            {
-                this.ApprovalMeansField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Mido
-        {
-            get
-            {
-                return this.MidoField;
-            }
-            set
-            {
-                this.MidoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PmaHolderName
-        {
-            get
-            {
-                return this.PmaHolderNameField;
-            }
-            set
-            {
-                this.PmaHolderNameField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PmaOem", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PmaOem : object
-    {
-        
-        private string ModelEligibilityField;
-        
-        private string OemPartField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ModelEligibility
-        {
-            get
-            {
-                return this.ModelEligibilityField;
-            }
-            set
-            {
-                this.ModelEligibilityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string OemPart
-        {
-            get
-            {
-                return this.OemPartField;
-            }
-            set
-            {
-                this.OemPartField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PmaPart", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PmaPart : object
-    {
-        
-        private System.Nullable<int> ItemNumberField;
-        
-        private string PartNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> ItemNumber
-        {
-            get
-            {
-                return this.ItemNumberField;
-            }
-            set
-            {
-                this.ItemNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PmaAddress", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PmaAddress : object
-    {
-        
-        private string Address1Field;
-        
-        private string Address2Field;
-        
-        private string CityField;
-        
-        private string StateField;
-        
-        private string ZipCodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address1
-        {
-            get
-            {
-                return this.Address1Field;
-            }
-            set
-            {
-                this.Address1Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address2
-        {
-            get
-            {
-                return this.Address2Field;
-            }
-            set
-            {
-                this.Address2Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City
-        {
-            get
-            {
-                return this.CityField;
-            }
-            set
-            {
-                this.CityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string State
-        {
-            get
-            {
-                return this.StateField;
-            }
-            set
-            {
-                this.StateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ZipCode
-        {
-            get
-            {
-                return this.ZipCodeField;
-            }
-            set
-            {
-                this.ZipCodeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ProcurementItem", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ProcurementItem", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class ProcurementItem : object
     {
         
@@ -9767,7 +7963,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Characteristic", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Characteristic", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class Characteristic : object
     {
         
@@ -9804,429 +8000,15 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetCageContactResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetCageContactResponseBody : object
-    {
-        
-        private ILSmartServiceReference.CageContact CageContactField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CageContact CageContact
-        {
-            get
-            {
-                return this.CageContactField;
-            }
-            set
-            {
-                this.CageContactField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CageContact", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CageContact : object
-    {
-        
-        private ILSmartServiceReference.CageAddress AddressField;
-        
-        private string CageField;
-        
-        private string CompanyNameField;
-        
-        private string DivisionField;
-        
-        private string FaxNumberField;
-        
-        private string PhoneNumberField;
-        
-        private string StatusField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CageAddress Address
-        {
-            get
-            {
-                return this.AddressField;
-            }
-            set
-            {
-                this.AddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cage
-        {
-            get
-            {
-                return this.CageField;
-            }
-            set
-            {
-                this.CageField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Division
-        {
-            get
-            {
-                return this.DivisionField;
-            }
-            set
-            {
-                this.DivisionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string FaxNumber
-        {
-            get
-            {
-                return this.FaxNumberField;
-            }
-            set
-            {
-                this.FaxNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PhoneNumber
-        {
-            get
-            {
-                return this.PhoneNumberField;
-            }
-            set
-            {
-                this.PhoneNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status
-        {
-            get
-            {
-                return this.StatusField;
-            }
-            set
-            {
-                this.StatusField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CageAddress", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CageAddress : object
-    {
-        
-        private ILSmartServiceReference.CageCityState CityStateField;
-        
-        private string CountryField;
-        
-        private string PoBoxField;
-        
-        private string PostalCodeField;
-        
-        private ILSmartServiceReference.CageStreetAddress StreetAddressField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CageCityState CityState
-        {
-            get
-            {
-                return this.CityStateField;
-            }
-            set
-            {
-                this.CityStateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Country
-        {
-            get
-            {
-                return this.CountryField;
-            }
-            set
-            {
-                this.CountryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PoBox
-        {
-            get
-            {
-                return this.PoBoxField;
-            }
-            set
-            {
-                this.PoBoxField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PostalCode
-        {
-            get
-            {
-                return this.PostalCodeField;
-            }
-            set
-            {
-                this.PostalCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CageStreetAddress StreetAddress
-        {
-            get
-            {
-                return this.StreetAddressField;
-            }
-            set
-            {
-                this.StreetAddressField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CageCityState", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CageCityState : object
-    {
-        
-        private string CityField;
-        
-        private string StateField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string City
-        {
-            get
-            {
-                return this.CityField;
-            }
-            set
-            {
-                this.CityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string State
-        {
-            get
-            {
-                return this.StateField;
-            }
-            set
-            {
-                this.StateField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CageStreetAddress", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CageStreetAddress : object
-    {
-        
-        private string Address1Field;
-        
-        private string Address2Field;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address1
-        {
-            get
-            {
-                return this.Address1Field;
-            }
-            set
-            {
-                this.Address1Field = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Address2
-        {
-            get
-            {
-                return this.Address2Field;
-            }
-            set
-            {
-                this.Address2Field = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetBatchSearchResultsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetBatchSearchResultsResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.BatchSearch SearchResultsField;
-        
-        private string StatusField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.BatchSearch SearchResults
-        {
-            get
-            {
-                return this.SearchResultsField;
-            }
-            set
-            {
-                this.SearchResultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status
-        {
-            get
-            {
-                return this.StatusField;
-            }
-            set
-            {
-                this.StatusField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetAllDataLegacyResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetAllDataLegacyResponseBody : object
-    {
-        
-        private ILSmartServiceReference.AllDataLegacyResult AllDataLegacyResultsField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.AllDataLegacyResult AllDataLegacyResults
-        {
-            get
-            {
-                return this.AllDataLegacyResultsField;
-            }
-            set
-            {
-                this.AllDataLegacyResultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AllDataLegacyResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class AllDataLegacyResult : object
-    {
-        
-        private string ResultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Results
-        {
-            get
-            {
-                return this.ResultsField;
-            }
-            set
-            {
-                this.ResultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartRecordKey", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartRecordKey", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPartRecordKey : object
     {
         
         private string AltPartNumberField;
         
         private string ConditionCodeField;
+        
+        private string ExchangeOptionField;
         
         private string ListCodeField;
         
@@ -10257,6 +8039,19 @@ namespace ILSmartServiceReference
             set
             {
                 this.ConditionCodeField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ExchangeOption
+        {
+            get
+            {
+                return this.ExchangeOptionField;
+            }
+            set
+            {
+                this.ExchangeOptionField = value;
             }
         }
         
@@ -10302,7 +8097,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DeletePartListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="DeletePartListingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class DeletePartListingResponseBody : object
     {
         
@@ -10339,7 +8134,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartUpdateResult", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartUpdateResult", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPartUpdateResult : object
     {
         
@@ -10376,7 +8171,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartUpdateConfirmation", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartUpdateConfirmation", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPartUpdateConfirmation : object
     {
         
@@ -10428,304 +8223,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroRecordDeleteKey", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroRecordDeleteKey : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string PartNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="DeleteMroListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class DeleteMroListingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroUpdateResult UpdateResultField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroUpdateResult UpdateResult
-        {
-            get
-            {
-                return this.UpdateResultField;
-            }
-            set
-            {
-                this.UpdateResultField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroUpdateResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroUpdateResult : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroUpdateConfirmation[] UpdateConfirmationsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroUpdateConfirmation[] UpdateConfirmations
-        {
-            get
-            {
-                return this.UpdateConfirmationsField;
-            }
-            set
-            {
-                this.UpdateConfirmationsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroUpdateConfirmation", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroUpdateConfirmation : object
-    {
-        
-        private string ActionField;
-        
-        private ILSmartServiceReference.Mro MroField;
-        
-        private string UpdateTypeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Action
-        {
-            get
-            {
-                return this.ActionField;
-            }
-            set
-            {
-                this.ActionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Mro Mro
-        {
-            get
-            {
-                return this.MroField;
-            }
-            set
-            {
-                this.MroField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string UpdateType
-        {
-            get
-            {
-                return this.UpdateTypeField;
-            }
-            set
-            {
-                this.UpdateTypeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Mro", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Mro : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string CageField;
-        
-        private string DescriptionField;
-        
-        private string ExchangeCodeField;
-        
-        private string PartNumberField;
-        
-        private string PriceField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cage
-        {
-            get
-            {
-                return this.CageField;
-            }
-            set
-            {
-                this.CageField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ExchangeCode
-        {
-            get
-            {
-                return this.ExchangeCodeField;
-            }
-            set
-            {
-                this.ExchangeCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Price
-        {
-            get
-            {
-                return this.PriceField;
-            }
-            set
-            {
-                this.PriceField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CheckInventoryLoadResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CheckInventoryLoadResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private bool IsCompleteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsComplete
-        {
-            get
-            {
-                return this.IsCompleteField;
-            }
-            set
-            {
-                this.IsCompleteField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartInput", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AviationPartInput", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AviationPartInput : object
     {
         
@@ -10927,7 +8425,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ChangePartListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ChangePartListingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class ChangePartListingResponseBody : object
     {
         
@@ -10964,3129 +8462,7 @@ namespace ILSmartServiceReference
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroInput : object
-    {
-        
-        private string AgencyField;
-        
-        private string AltPartNumberField;
-        
-        private string CageField;
-        
-        private string DescriptionField;
-        
-        private string ExchangeCodeField;
-        
-        private string PartNumberField;
-        
-        private string PriceField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Agency
-        {
-            get
-            {
-                return this.AgencyField;
-            }
-            set
-            {
-                this.AgencyField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Cage
-        {
-            get
-            {
-                return this.CageField;
-            }
-            set
-            {
-                this.CageField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ExchangeCode
-        {
-            get
-            {
-                return this.ExchangeCodeField;
-            }
-            set
-            {
-                this.ExchangeCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Price
-        {
-            get
-            {
-                return this.PriceField;
-            }
-            set
-            {
-                this.PriceField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="ChangeMroListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class ChangeMroListingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroUpdateResult UpdateResultField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroUpdateResult UpdateResult
-        {
-            get
-            {
-                return this.UpdateResultField;
-            }
-            set
-            {
-                this.UpdateResultField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LoginResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class LoginResponseBody : object
-    {
-        
-        private string CompanyNameField;
-        
-        private string EmailAddressField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private string PhoneField;
-        
-        private ILSmartServiceReference.CompanySubscriberOption[] resultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EmailAddress
-        {
-            get
-            {
-                return this.EmailAddressField;
-            }
-            set
-            {
-                this.EmailAddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Phone
-        {
-            get
-            {
-                return this.PhoneField;
-            }
-            set
-            {
-                this.PhoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CompanySubscriberOption[] results
-        {
-            get
-            {
-                return this.resultsField;
-            }
-            set
-            {
-                this.resultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CompanySubscriberOption", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class CompanySubscriberOption : object
-    {
-        
-        private int CompanySubscriberOptionIDField;
-        
-        private string IsActiveField;
-        
-        private string SubscriberOptionCodeField;
-        
-        private string SubscriberOptionDescriptionField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int CompanySubscriberOptionID
-        {
-            get
-            {
-                return this.CompanySubscriberOptionIDField;
-            }
-            set
-            {
-                this.CompanySubscriberOptionIDField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string IsActive
-        {
-            get
-            {
-                return this.IsActiveField;
-            }
-            set
-            {
-                this.IsActiveField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SubscriberOptionCode
-        {
-            get
-            {
-                return this.SubscriberOptionCodeField;
-            }
-            set
-            {
-                this.SubscriberOptionCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SubscriberOptionDescription
-        {
-            get
-            {
-                return this.SubscriberOptionDescriptionField;
-            }
-            set
-            {
-                this.SubscriberOptionDescriptionField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsRecievedByDateRangeResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqsRecievedByDateRangeResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq[] RfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq[] Rfqs
-        {
-            get
-            {
-                return this.RfqsField;
-            }
-            set
-            {
-                this.RfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRfqsSentByDateRangeResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRfqsSentByDateRangeResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Rfq[] RfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Rfq[] Rfqs
-        {
-            get
-            {
-                return this.RfqsField;
-            }
-            set
-            {
-                this.RfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRecentMessageBroadcastsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRecentMessageBroadcastsResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MessageBroadcast[] MessageBroadcastsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MessageBroadcast[] MessageBroadcasts
-        {
-            get
-            {
-                return this.MessageBroadcastsField;
-            }
-            set
-            {
-                this.MessageBroadcastsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MessageBroadcast", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MessageBroadcast : object
-    {
-        
-        private string CategoryField;
-        
-        private string ClassificationNameField;
-        
-        private ILSmartServiceReference.Address CompanyAddressField;
-        
-        private string CompanyDistanceField;
-        
-        private string CompanyEmailField;
-        
-        private string CompanyLogoField;
-        
-        private string CompanyNameField;
-        
-        private string CompanyPhoneField;
-        
-        private System.Nullable<System.DateTime> CreateDateField;
-        
-        private ILSmartServiceReference.Document[] DocumentsField;
-        
-        private int IdField;
-        
-        private bool IsFeaturedField;
-        
-        private bool IsViewedField;
-        
-        private string MessageField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Category
-        {
-            get
-            {
-                return this.CategoryField;
-            }
-            set
-            {
-                this.CategoryField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ClassificationName
-        {
-            get
-            {
-                return this.ClassificationNameField;
-            }
-            set
-            {
-                this.ClassificationNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Address CompanyAddress
-        {
-            get
-            {
-                return this.CompanyAddressField;
-            }
-            set
-            {
-                this.CompanyAddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyDistance
-        {
-            get
-            {
-                return this.CompanyDistanceField;
-            }
-            set
-            {
-                this.CompanyDistanceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyEmail
-        {
-            get
-            {
-                return this.CompanyEmailField;
-            }
-            set
-            {
-                this.CompanyEmailField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyLogo
-        {
-            get
-            {
-                return this.CompanyLogoField;
-            }
-            set
-            {
-                this.CompanyLogoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyPhone
-        {
-            get
-            {
-                return this.CompanyPhoneField;
-            }
-            set
-            {
-                this.CompanyPhoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CreateDate
-        {
-            get
-            {
-                return this.CreateDateField;
-            }
-            set
-            {
-                this.CreateDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Document[] Documents
-        {
-            get
-            {
-                return this.DocumentsField;
-            }
-            set
-            {
-                this.DocumentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id
-        {
-            get
-            {
-                return this.IdField;
-            }
-            set
-            {
-                this.IdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsFeatured
-        {
-            get
-            {
-                return this.IsFeaturedField;
-            }
-            set
-            {
-                this.IsFeaturedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool IsViewed
-        {
-            get
-            {
-                return this.IsViewedField;
-            }
-            set
-            {
-                this.IsViewedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message
-        {
-            get
-            {
-                return this.MessageField;
-            }
-            set
-            {
-                this.MessageField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendPartQuotesMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendPartQuotesMobileResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] PartQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] PartQuotes
-        {
-            get
-            {
-                return this.PartQuotesField;
-            }
-            set
-            {
-                this.PartQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MROsRfqInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MROsRfqInput : object
-    {
-        
-        private string CommentField;
-        
-        private System.Nullable<System.DateTime> DeliverByDateField;
-        
-        private ILSmartServiceReference.MROSearchResultInput[] PartsField;
-        
-        private string PriorityField;
-        
-        private int QuoteWithinDaysField;
-        
-        private string ReferenceNumberField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comment
-        {
-            get
-            {
-                return this.CommentField;
-            }
-            set
-            {
-                this.CommentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DeliverByDate
-        {
-            get
-            {
-                return this.DeliverByDateField;
-            }
-            set
-            {
-                this.DeliverByDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MROSearchResultInput[] Parts
-        {
-            get
-            {
-                return this.PartsField;
-            }
-            set
-            {
-                this.PartsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority
-        {
-            get
-            {
-                return this.PriorityField;
-            }
-            set
-            {
-                this.PriorityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int QuoteWithinDays
-        {
-            get
-            {
-                return this.QuoteWithinDaysField;
-            }
-            set
-            {
-                this.QuoteWithinDaysField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ReferenceNumber
-        {
-            get
-            {
-                return this.ReferenceNumberField;
-            }
-            set
-            {
-                this.ReferenceNumberField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MROSearchResultInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MROSearchResultInput : object
-    {
-        
-        private string AlternatePartNumberField;
-        
-        private string BuyerPartDescriptionField;
-        
-        private string DescriptionField;
-        
-        private string ModelTypeField;
-        
-        private string PartEnteredField;
-        
-        private string PartNumberField;
-        
-        private string QuantityField;
-        
-        private System.Nullable<long> SearchPartIdField;
-        
-        private string ServiceCodeField;
-        
-        private string SupplierIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AlternatePartNumber
-        {
-            get
-            {
-                return this.AlternatePartNumberField;
-            }
-            set
-            {
-                this.AlternatePartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BuyerPartDescription
-        {
-            get
-            {
-                return this.BuyerPartDescriptionField;
-            }
-            set
-            {
-                this.BuyerPartDescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ModelType
-        {
-            get
-            {
-                return this.ModelTypeField;
-            }
-            set
-            {
-                this.ModelTypeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartEntered
-        {
-            get
-            {
-                return this.PartEnteredField;
-            }
-            set
-            {
-                this.PartEnteredField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> SearchPartId
-        {
-            get
-            {
-                return this.SearchPartIdField;
-            }
-            set
-            {
-                this.SearchPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ServiceCode
-        {
-            get
-            {
-                return this.ServiceCodeField;
-            }
-            set
-            {
-                this.ServiceCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierId
-        {
-            get
-            {
-                return this.SupplierIdField;
-            }
-            set
-            {
-                this.SupplierIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendMRORfqResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendMRORfqResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.SendMROsRfqResult RfqResultField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SendMROsRfqResult RfqResult
-        {
-            get
-            {
-                return this.RfqResultField;
-            }
-            set
-            {
-                this.RfqResultField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendMROsRfqResult", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendMROsRfqResult : object
-    {
-        
-        private ILSmartServiceReference.NonFatalError[] NonFatalErrorsField;
-        
-        private ILSmartServiceReference.MroRfq RfqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.NonFatalError[] NonFatalErrors
-        {
-            get
-            {
-                return this.NonFatalErrorsField;
-            }
-            set
-            {
-                this.NonFatalErrorsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRfq Rfq
-        {
-            get
-            {
-                return this.RfqField;
-            }
-            set
-            {
-                this.RfqField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroRfq", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroRfq : object
-    {
-        
-        private ILSmartServiceReference.Attachment[] AttachmentsField;
-        
-        private System.Nullable<System.DateTime> CloseDateField;
-        
-        private string CommentsField;
-        
-        private ILSmartServiceReference.ContactInfo ContactInfoField;
-        
-        private System.Nullable<System.DateTime> CreateDateField;
-        
-        private System.Nullable<System.DateTime> DeliverByDateField;
-        
-        private string EntryCodeField;
-        
-        private ILSmartServiceReference.Priority PriorityField;
-        
-        private int QuoteWithinDaysField;
-        
-        private string ReferenceNumberField;
-        
-        private ILSmartServiceReference.MroRequestedItemCollection RequestedMroItemsField;
-        
-        private System.Nullable<long> RfqIdField;
-        
-        private string RfqPreparedByField;
-        
-        private string StatusField;
-        
-        private System.Nullable<long> ViewedIndicatorField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Attachment[] Attachments
-        {
-            get
-            {
-                return this.AttachmentsField;
-            }
-            set
-            {
-                this.AttachmentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CloseDate
-        {
-            get
-            {
-                return this.CloseDateField;
-            }
-            set
-            {
-                this.CloseDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return this.CommentsField;
-            }
-            set
-            {
-                this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.ContactInfo ContactInfo
-        {
-            get
-            {
-                return this.ContactInfoField;
-            }
-            set
-            {
-                this.ContactInfoField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> CreateDate
-        {
-            get
-            {
-                return this.CreateDateField;
-            }
-            set
-            {
-                this.CreateDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<System.DateTime> DeliverByDate
-        {
-            get
-            {
-                return this.DeliverByDateField;
-            }
-            set
-            {
-                this.DeliverByDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EntryCode
-        {
-            get
-            {
-                return this.EntryCodeField;
-            }
-            set
-            {
-                this.EntryCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Priority Priority
-        {
-            get
-            {
-                return this.PriorityField;
-            }
-            set
-            {
-                this.PriorityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int QuoteWithinDays
-        {
-            get
-            {
-                return this.QuoteWithinDaysField;
-            }
-            set
-            {
-                this.QuoteWithinDaysField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ReferenceNumber
-        {
-            get
-            {
-                return this.ReferenceNumberField;
-            }
-            set
-            {
-                this.ReferenceNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRequestedItemCollection RequestedMroItems
-        {
-            get
-            {
-                return this.RequestedMroItemsField;
-            }
-            set
-            {
-                this.RequestedMroItemsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> RfqId
-        {
-            get
-            {
-                return this.RfqIdField;
-            }
-            set
-            {
-                this.RfqIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RfqPreparedBy
-        {
-            get
-            {
-                return this.RfqPreparedByField;
-            }
-            set
-            {
-                this.RfqPreparedByField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Status
-        {
-            get
-            {
-                return this.StatusField;
-            }
-            set
-            {
-                this.StatusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ViewedIndicator
-        {
-            get
-            {
-                return this.ViewedIndicatorField;
-            }
-            set
-            {
-                this.ViewedIndicatorField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroRequestedItemCollection", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroRequestedItemCollection : object
-    {
-        
-        private ILSmartServiceReference.MroRfqRequestedPart[] ItemsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRfqRequestedPart[] Items
-        {
-            get
-            {
-                return this.ItemsField;
-            }
-            set
-            {
-                this.ItemsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MroRfqRequestedPart", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MroRfqRequestedPart : object
-    {
-        
-        private string AlternatePartNumberField;
-        
-        private string BuyerDescriptionField;
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemIdField;
-        
-        private System.Nullable<short> ItemNumberField;
-        
-        private string ModelTypeField;
-        
-        private string PartNumberField;
-        
-        private System.Nullable<long> QuantityField;
-        
-        private string ServiceCodeField;
-        
-        private ILSmartServiceReference.SupplierPartMroListing[] SupplierListingsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AlternatePartNumber
-        {
-            get
-            {
-                return this.AlternatePartNumberField;
-            }
-            set
-            {
-                this.AlternatePartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string BuyerDescription
-        {
-            get
-            {
-                return this.BuyerDescriptionField;
-            }
-            set
-            {
-                this.BuyerDescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemId
-        {
-            get
-            {
-                return this.ItemIdField;
-            }
-            set
-            {
-                this.ItemIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<short> ItemNumber
-        {
-            get
-            {
-                return this.ItemNumberField;
-            }
-            set
-            {
-                this.ItemNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ModelType
-        {
-            get
-            {
-                return this.ModelTypeField;
-            }
-            set
-            {
-                this.ModelTypeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ServiceCode
-        {
-            get
-            {
-                return this.ServiceCodeField;
-            }
-            set
-            {
-                this.ServiceCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SupplierPartMroListing[] SupplierListings
-        {
-            get
-            {
-                return this.SupplierListingsField;
-            }
-            set
-            {
-                this.SupplierListingsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SupplierPartMroListing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SupplierPartMroListing : object
-    {
-        
-        private ILSmartServiceReference.PartMroListing[] PartListingsField;
-        
-        private string SupplierIdField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartMroListing[] PartListings
-        {
-            get
-            {
-                return this.PartListingsField;
-            }
-            set
-            {
-                this.PartListingsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string SupplierId
-        {
-            get
-            {
-                return this.SupplierIdField;
-            }
-            set
-            {
-                this.SupplierIdField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="PartMroListing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class PartMroListing : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string AltQuantityField;
-        
-        private string ConditionCodeField;
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private string MakerField;
-        
-        private string ModelField;
-        
-        private string PartNumberField;
-        
-        private System.Nullable<long> QuantityField;
-        
-        private string ServiceCodeField;
-        
-        private string TraceabilityCodeField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltQuantity
-        {
-            get
-            {
-                return this.AltQuantityField;
-            }
-            set
-            {
-                this.AltQuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ConditionCode
-        {
-            get
-            {
-                return this.ConditionCodeField;
-            }
-            set
-            {
-                this.ConditionCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Maker
-        {
-            get
-            {
-                return this.MakerField;
-            }
-            set
-            {
-                this.MakerField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Model
-        {
-            get
-            {
-                return this.ModelField;
-            }
-            set
-            {
-                this.ModelField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> Quantity
-        {
-            get
-            {
-                return this.QuantityField;
-            }
-            set
-            {
-                this.QuantityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ServiceCode
-        {
-            get
-            {
-                return this.ServiceCodeField;
-            }
-            set
-            {
-                this.ServiceCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TraceabilityCode
-        {
-            get
-            {
-                return this.TraceabilityCodeField;
-            }
-            set
-            {
-                this.TraceabilityCodeField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MRORfqQuoteInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MRORfqQuoteInput : object
-    {
-        
-        private string CommentsField;
-        
-        private ILSmartServiceReference.QuotedMROInput[] QuoteField;
-        
-        private System.Nullable<long> RfqIdField;
-        
-        private string TermsNConditionsField;
-        
-        private string WarrantyField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return this.CommentsField;
-            }
-            set
-            {
-                this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedMROInput[] Quote
-        {
-            get
-            {
-                return this.QuoteField;
-            }
-            set
-            {
-                this.QuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> RfqId
-        {
-            get
-            {
-                return this.RfqIdField;
-            }
-            set
-            {
-                this.RfqIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TermsNConditions
-        {
-            get
-            {
-                return this.TermsNConditionsField;
-            }
-            set
-            {
-                this.TermsNConditionsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Warranty
-        {
-            get
-            {
-                return this.WarrantyField;
-            }
-            set
-            {
-                this.WarrantyField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedMROInput", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedMROInput : object
-    {
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private System.Nullable<bool> NoQuoteField;
-        
-        private ILSmartServiceReference.QuotedMRO PartField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> NoQuote
-        {
-            get
-            {
-                return this.NoQuoteField;
-            }
-            set
-            {
-                this.NoQuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedMRO Part
-        {
-            get
-            {
-                return this.PartField;
-            }
-            set
-            {
-                this.PartField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedMRO", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedMRO : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string PartNumberField;
-        
-        private ILSmartServiceReference.QuotedService[] ServicesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedService[] Services
-        {
-            get
-            {
-                return this.ServicesField;
-            }
-            set
-            {
-                this.ServicesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuotedService", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuotedService : object
-    {
-        
-        private string CostPlusField;
-        
-        private string PriceField;
-        
-        private string ServiceCodeField;
-        
-        private string TurnaroundDaysField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CostPlus
-        {
-            get
-            {
-                return this.CostPlusField;
-            }
-            set
-            {
-                this.CostPlusField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Price
-        {
-            get
-            {
-                return this.PriceField;
-            }
-            set
-            {
-                this.PriceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ServiceCode
-        {
-            get
-            {
-                return this.ServiceCodeField;
-            }
-            set
-            {
-                this.ServiceCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TurnaroundDays
-        {
-            get
-            {
-                return this.TurnaroundDaysField;
-            }
-            set
-            {
-                this.TurnaroundDaysField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="SendMROQuoteResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class SendMROQuoteResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MROsRfqQuote[] MROQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MROsRfqQuote[] MROQuotes
-        {
-            get
-            {
-                return this.MROQuotesField;
-            }
-            set
-            {
-                this.MROQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="MROsRfqQuote", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class MROsRfqQuote : object
-    {
-        
-        private ILSmartServiceReference.Attachment[] AttachmentsField;
-        
-        private string CommentsField;
-        
-        private string DeliverByDateField;
-        
-        private string EntryCodeField;
-        
-        private ILSmartServiceReference.QuoteRequestedMRO[] PartsField;
-        
-        private string PriorityField;
-        
-        private string QuoteWithinDaysField;
-        
-        private string ReferenceNumberField;
-        
-        private string RfqCreateDateField;
-        
-        private System.Nullable<long> RfqIdField;
-        
-        private ILSmartServiceReference.SupplierCompany SupplierField;
-        
-        private string TermsNConditionsField;
-        
-        private string WarrantyField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Attachment[] Attachments
-        {
-            get
-            {
-                return this.AttachmentsField;
-            }
-            set
-            {
-                this.AttachmentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Comments
-        {
-            get
-            {
-                return this.CommentsField;
-            }
-            set
-            {
-                this.CommentsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DeliverByDate
-        {
-            get
-            {
-                return this.DeliverByDateField;
-            }
-            set
-            {
-                this.DeliverByDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EntryCode
-        {
-            get
-            {
-                return this.EntryCodeField;
-            }
-            set
-            {
-                this.EntryCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuoteRequestedMRO[] Parts
-        {
-            get
-            {
-                return this.PartsField;
-            }
-            set
-            {
-                this.PartsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Priority
-        {
-            get
-            {
-                return this.PriorityField;
-            }
-            set
-            {
-                this.PriorityField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string QuoteWithinDays
-        {
-            get
-            {
-                return this.QuoteWithinDaysField;
-            }
-            set
-            {
-                this.QuoteWithinDaysField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ReferenceNumber
-        {
-            get
-            {
-                return this.ReferenceNumberField;
-            }
-            set
-            {
-                this.ReferenceNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string RfqCreateDate
-        {
-            get
-            {
-                return this.RfqCreateDateField;
-            }
-            set
-            {
-                this.RfqCreateDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> RfqId
-        {
-            get
-            {
-                return this.RfqIdField;
-            }
-            set
-            {
-                this.RfqIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.SupplierCompany Supplier
-        {
-            get
-            {
-                return this.SupplierField;
-            }
-            set
-            {
-                this.SupplierField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string TermsNConditions
-        {
-            get
-            {
-                return this.TermsNConditionsField;
-            }
-            set
-            {
-                this.TermsNConditionsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Warranty
-        {
-            get
-            {
-                return this.WarrantyField;
-            }
-            set
-            {
-                this.WarrantyField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="QuoteRequestedMRO", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class QuoteRequestedMRO : object
-    {
-        
-        private string AltPartNumberField;
-        
-        private string DescriptionField;
-        
-        private System.Nullable<long> ItemIdField;
-        
-        private System.Nullable<long> ItemSupplierPartIdField;
-        
-        private string ModelTypeField;
-        
-        private System.Nullable<bool> NoQuoteField;
-        
-        private string PartNumberField;
-        
-        private ILSmartServiceReference.QuotedMRO QuoteField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string AltPartNumber
-        {
-            get
-            {
-                return this.AltPartNumberField;
-            }
-            set
-            {
-                this.AltPartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemId
-        {
-            get
-            {
-                return this.ItemIdField;
-            }
-            set
-            {
-                this.ItemIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<long> ItemSupplierPartId
-        {
-            get
-            {
-                return this.ItemSupplierPartIdField;
-            }
-            set
-            {
-                this.ItemSupplierPartIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ModelType
-        {
-            get
-            {
-                return this.ModelTypeField;
-            }
-            set
-            {
-                this.ModelTypeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<bool> NoQuote
-        {
-            get
-            {
-                return this.NoQuoteField;
-            }
-            set
-            {
-                this.NoQuoteField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.QuotedMRO Quote
-        {
-            get
-            {
-                return this.QuoteField;
-            }
-            set
-            {
-                this.QuoteField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="LoginMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class LoginMobileResponseBody : object
-    {
-        
-        private string CompanyNameField;
-        
-        private string EmailAddressField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private string PhoneField;
-        
-        private ILSmartServiceReference.CompanySubscriberOption[] resultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string CompanyName
-        {
-            get
-            {
-                return this.CompanyNameField;
-            }
-            set
-            {
-                this.CompanyNameField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string EmailAddress
-        {
-            get
-            {
-                return this.EmailAddressField;
-            }
-            set
-            {
-                this.EmailAddressField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Phone
-        {
-            get
-            {
-                return this.PhoneField;
-            }
-            set
-            {
-                this.PhoneField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.CompanySubscriberOption[] results
-        {
-            get
-            {
-                return this.resultsField;
-            }
-            set
-            {
-                this.resultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetRecentMessageBroadcastsMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetRecentMessageBroadcastsMobileResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MessageBroadcast[] MessageBroadcastsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MessageBroadcast[] MessageBroadcasts
-        {
-            get
-            {
-                return this.MessageBroadcastsField;
-            }
-            set
-            {
-                this.MessageBroadcastsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetPartQuotesMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetPartQuotesMobileResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.PartsRfqQuote[] PartQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.PartsRfqQuote[] PartQuotes
-        {
-            get
-            {
-                return this.PartQuotesField;
-            }
-            set
-            {
-                this.PartQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewMroRfqsReceivedResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetNewMroRfqsReceivedResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroRfq[] RfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRfq[] Rfqs
-        {
-            get
-            {
-                return this.RfqsField;
-            }
-            set
-            {
-                this.RfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMROQuotesResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMROQuotesResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MROsRfqQuote[] MROQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MROsRfqQuote[] MROQuotes
-        {
-            get
-            {
-                return this.MROQuotesField;
-            }
-            set
-            {
-                this.MROQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetNewMroQuotesReceivedResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetNewMroQuotesReceivedResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MROsRfqQuote[] MroQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MROsRfqQuote[] MroQuotes
-        {
-            get
-            {
-                return this.MroQuotesField;
-            }
-            set
-            {
-                this.MroQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMroResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMroResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroRfq MroRfqField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRfq MroRfq
-        {
-            get
-            {
-                return this.MroRfqField;
-            }
-            set
-            {
-                this.MroRfqField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMroRfqsReceivedByDateResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMroRfqsReceivedByDateResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroRfq[] MroRfqsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroRfq[] MroRfqs
-        {
-            get
-            {
-                return this.MroRfqsField;
-            }
-            set
-            {
-                this.MroRfqsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMroRfqCompanyInformationResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMroRfqCompanyInformationResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.Company MroRfqCompanyField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Company MroRfqCompany
-        {
-            get
-            {
-                return this.MroRfqCompanyField;
-            }
-            set
-            {
-                this.MroRfqCompanyField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetMroQuotesReceivedByDateResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetMroQuotesReceivedByDateResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MROsRfqQuote[] MroQuotesField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MROsRfqQuote[] MroQuotes
-        {
-            get
-            {
-                return this.MroQuotesField;
-            }
-            set
-            {
-                this.MroQuotesField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetDocumentResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetDocumentResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Document DocumentField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Document Document
-        {
-            get
-            {
-                return this.DocumentField;
-            }
-            set
-            {
-                this.DocumentField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetFmvPricingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetFmvPricingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.FmvPricing[] FmvResultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.FmvPricing[] FmvResults
-        {
-            get
-            {
-                return this.FmvResultsField;
-            }
-            set
-            {
-                this.FmvResultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="FmvPricing", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class FmvPricing : object
-    {
-        
-        private string ConditionCodeField;
-        
-        private string DescriptionField;
-        
-        private decimal FmvField;
-        
-        private System.DateTime FmvDateField;
-        
-        private decimal HighFmvField;
-        
-        private decimal LowFmvField;
-        
-        private decimal MaxPriceField;
-        
-        private decimal MeanField;
-        
-        private decimal MinPriceField;
-        
-        private decimal ModeField;
-        
-        private string PartNumberField;
-        
-        private int PricePointsField;
-        
-        private System.DateTime RecentPriceDateField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string ConditionCode
-        {
-            get
-            {
-                return this.ConditionCodeField;
-            }
-            set
-            {
-                this.ConditionCodeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Description
-        {
-            get
-            {
-                return this.DescriptionField;
-            }
-            set
-            {
-                this.DescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Fmv
-        {
-            get
-            {
-                return this.FmvField;
-            }
-            set
-            {
-                this.FmvField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime FmvDate
-        {
-            get
-            {
-                return this.FmvDateField;
-            }
-            set
-            {
-                this.FmvDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal HighFmv
-        {
-            get
-            {
-                return this.HighFmvField;
-            }
-            set
-            {
-                this.HighFmvField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal LowFmv
-        {
-            get
-            {
-                return this.LowFmvField;
-            }
-            set
-            {
-                this.LowFmvField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal MaxPrice
-        {
-            get
-            {
-                return this.MaxPriceField;
-            }
-            set
-            {
-                this.MaxPriceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Mean
-        {
-            get
-            {
-                return this.MeanField;
-            }
-            set
-            {
-                this.MeanField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal MinPrice
-        {
-            get
-            {
-                return this.MinPriceField;
-            }
-            set
-            {
-                this.MinPriceField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public decimal Mode
-        {
-            get
-            {
-                return this.ModeField;
-            }
-            set
-            {
-                this.ModeField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string PartNumber
-        {
-            get
-            {
-                return this.PartNumberField;
-            }
-            set
-            {
-                this.PartNumberField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PricePoints
-        {
-            get
-            {
-                return this.PricePointsField;
-            }
-            set
-            {
-                this.PricePointsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime RecentPriceDate
-        {
-            get
-            {
-                return this.RecentPriceDateField;
-            }
-            set
-            {
-                this.RecentPriceDateField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetAnnouncementsResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetAnnouncementsResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Announcement[] AnnouncementsField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Announcement[] Announcements
-        {
-            get
-            {
-                return this.AnnouncementsField;
-            }
-            set
-            {
-                this.AnnouncementsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Announcement", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class Announcement : object
-    {
-        
-        private string DisplayFrequencyTypeCDField;
-        
-        private System.DateTime EndDateField;
-        
-        private bool MarkedAsDeletedField;
-        
-        private string MessageDescriptionField;
-        
-        private string MessageIdField;
-        
-        private string MessageTextField;
-        
-        private string MessageTypeCDField;
-        
-        private System.DateTime StartDateField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string DisplayFrequencyTypeCD
-        {
-            get
-            {
-                return this.DisplayFrequencyTypeCDField;
-            }
-            set
-            {
-                this.DisplayFrequencyTypeCDField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime EndDate
-        {
-            get
-            {
-                return this.EndDateField;
-            }
-            set
-            {
-                this.EndDateField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool MarkedAsDeleted
-        {
-            get
-            {
-                return this.MarkedAsDeletedField;
-            }
-            set
-            {
-                this.MarkedAsDeletedField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MessageDescription
-        {
-            get
-            {
-                return this.MessageDescriptionField;
-            }
-            set
-            {
-                this.MessageDescriptionField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MessageId
-        {
-            get
-            {
-                return this.MessageIdField;
-            }
-            set
-            {
-                this.MessageIdField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MessageText
-        {
-            get
-            {
-                return this.MessageTextField;
-            }
-            set
-            {
-                this.MessageTextField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string MessageTypeCD
-        {
-            get
-            {
-                return this.MessageTypeCDField;
-            }
-            set
-            {
-                this.MessageTypeCDField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime StartDate
-        {
-            get
-            {
-                return this.StartDateField;
-            }
-            set
-            {
-                this.StartDateField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="GetAnnouncementsMobileResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class GetAnnouncementsMobileResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Announcement[] AnnouncementsField;
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Announcement[] Announcements
-        {
-            get
-            {
-                return this.AnnouncementsField;
-            }
-            set
-            {
-                this.AnnouncementsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AddPartListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="AddPartListingResponseBody", Namespace="http://namespace.ilsmart.com/v2")]
     public partial class AddPartListingResponseBody : object
     {
         
@@ -14121,341 +8497,102 @@ namespace ILSmartServiceReference
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AddMroListingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class AddMroListingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        private ILSmartServiceReference.MroUpdateResult UpdateResultField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.MroUpdateResult UpdateResult
-        {
-            get
-            {
-                return this.UpdateResultField;
-            }
-            set
-            {
-                this.UpdateResultField = value;
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="AddExternalPricingResponseBody", Namespace="http://namespace.ilsmart.com/v1")]
-    public partial class AddExternalPricingResponseBody : object
-    {
-        
-        private ILSmartServiceReference.Fault[] FaultsField;
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public ILSmartServiceReference.Fault[] Faults
-        {
-            get
-            {
-                return this.FaultsField;
-            }
-            set
-            {
-                this.FaultsField = value;
-            }
-        }
-    }
-    
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://namespace.ilsmart.com/v1", ConfigurationName="ILSmartServiceReference.ISyncReply")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://namespace.ilsmart.com/v2", ConfigurationName="ILSmartServiceReference.ISyncReply")]
     public interface ISyncReply
     {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/UpdateViewedIndicator", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/SendMessageBroadcast", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.UpdateViewedIndicatorResponseBody> UpdateViewedIndicatorAsync(string Password, System.Nullable<long> RfqId, string SupplierCompanyId, string UserId, System.Nullable<long> ViewedIndicator);
+        System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastResponseBody> SendMessageBroadcastAsync(string Category, ILSmartServiceReference.Document[] Documents, bool IsFeatured, string Message, string Password, string Type, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SubmitInventoryLoad", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/SendMessageBroadcastMobile", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SubmitInventoryLoadResponseBody> SubmitInventoryLoadAsync(ILSmartServiceReference.EitSubmission Eit, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastMobileResponseBody> SendMessageBroadcastMobileAsync(string Category, ILSmartServiceReference.Document[] Documents, string ExternalSourceCd, bool IsFeatured, string Key, string Message, string Password, string Type, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SubmitBatchSearch", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/IsPartAvailable", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SubmitBatchSearchResponseBody> SubmitBatchSearchAsync(string Password, ILSmartServiceReference.BatchSearch SearchRequest, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.IsPartAvailableResponseBody> IsPartAvailableAsync(string PartNumber, string Password, string SupplierId, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendMessageBroadcast", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastResponseBody> SendMessageBroadcastAsync(string Category, string Message, string Password, string Type, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendSearchlessPartRfq", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendSearchlessPartRfqResponseBody> SendSearchlessPartRfqAsync(ILSmartServiceReference.SearchlessPartsRfqInput InputRfq, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendQuickRfq", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendQuickRfqResponseBody> SendQuickRfqAsync(string[] ConditionCodes, System.Nullable<bool> IncludeMcrlCrossRef, System.Nullable<bool> IncludePmaCrossRef, string Location, ILSmartServiceReference.QuickRfqPartInput[] Parts, string Password, System.Nullable<long> PreferredVendorGroupId, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendPartRfq", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendPartRfqResponseBody> SendPartRfqAsync(ILSmartServiceReference.PartsRfqInput InputRfq, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendPartQuotes", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendPartQuotesResponseBody> SendPartQuotesAsync(string Password, ILSmartServiceReference.PartsRfqQuoteInput Quotes, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/IsPartAvailable", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.IsPartAvailableResponseBody> IsPartAvailableAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/IsMROPartAvailable", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.IsMROPartAvailableResponseBody> IsMROPartAvailableAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetSupplierDirectory", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetSupplierDirectoryResponseBody> GetSupplierDirectoryAsync(string Location, string Password, string SearchTerm, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfq", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqResponseBody> GetRfqAsync(string Password, System.Nullable<long> RfqId, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqsSentByDate", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateResponseBody> GetRfqsSentByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqsReceivedByDate", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateResponseBody> GetRfqsReceivedByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqsReceivedByDateWithSenderInventory", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateWithSenderInventoryResponseBody> GetRfqsReceivedByDateWithSenderInventoryAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqCompanyInformation", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqCompanyInformationResponseBody> GetRfqCompanyInformationAsync(string CompanyId, string Password, System.Nullable<long> RfqId, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqAttachedDocuments", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqAttachedDocumentsResponseBody> GetRfqAttachedDocumentsAsync(System.Nullable<long>[] DocumentId, string Password, System.Nullable<long> RfqId, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPreferredVendorGroups", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPreferredVendorGroupsResponseBody> GetPreferredVendorGroupsAsync(string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartStatsAndPricing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartStatsAndPricingResponseBody> GetPartStatsAndPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartsAvailability", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartsAvailabilityResponseBody> GetPartsAvailabilityAsync(string[] ConditionCodes, string Location, string PartNumber, string Password, System.Nullable<int> Quantity, System.Nullable<bool> UseMcrlXref, System.Nullable<bool> UsePmaXref, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartsAvailabilityMobile", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartsAvailabilityMobileResponseBody> GetPartsAvailabilityMobileAsync(string[] ConditionCodes, string Location, string PartNumber, string Password, System.Nullable<int> Quantity, System.Nullable<bool> UseMcrlXref, System.Nullable<bool> UsePmaXref, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartQuotes", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesResponseBody> GetPartQuotesAsync(string Password, System.Nullable<long> RfqId, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartQuotesByDate", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesByDateResponseBody> GetPartQuotesByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartQuoteHistory", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuoteHistoryResponseBody> GetPartQuoteHistoryAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartPublishedPricing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartPublishedPricingResponseBody> GetPartPublishedPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartOverhaulStats", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartOverhaulStatsResponseBody> GetPartOverhaulStatsAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartListingResponseBody> GetPartListingAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartInventorySummary", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartInventorySummaryResponseBody> GetPartInventorySummaryAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartInventoryStats", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartInventoryStatsResponseBody> GetPartInventoryStatsAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNiinsByPart", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNiinsByPartResponseBody> GetNiinsByPartAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNewRfqsReceived", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewRfqsReceivedResponseBody> GetNewRfqsReceivedAsync(bool IncludeClosed, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNewRfqsReceivedWithSenderInventory", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewRfqsReceivedWithSenderInventoryResponseBody> GetNewRfqsReceivedWithSenderInventoryAsync(bool IncludeClosed, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNewPartQuotesReceived", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewPartQuotesReceivedResponseBody> GetNewPartQuotesReceivedAsync(bool IncludeQuotesForClosedRfqs, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMrosAvailability", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMrosAvailabilityResponseBody> GetMrosAvailabilityAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMROPartInventorySummary", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMROPartInventorySummaryResponseBody> GetMROPartInventorySummaryAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetGovernmentData", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetGovernmentDataResponseBody> GetGovernmentDataAsync(string[] GovFilesToSearch, string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetCageContact", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetCageContactResponseBody> GetCageContactAsync(string Cage, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetBatchSearchResults", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetBatchSearchResultsResponseBody> GetBatchSearchResultsAsync(System.Nullable<long> BatchSearchId, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetAllDataLegacy", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetAllDataLegacyResponseBody> GetAllDataLegacyAsync(string PartNumber, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/DeletePartListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.DeletePartListingResponseBody> DeletePartListingAsync(ILSmartServiceReference.AviationPartRecordKey[] Parts, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/DeleteMroListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.DeleteMroListingResponseBody> DeleteMroListingAsync(ILSmartServiceReference.MroRecordDeleteKey[] Mros, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/CheckInventoryLoad", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.CheckInventoryLoadResponseBody> CheckInventoryLoadAsync(System.Nullable<long> InventoryLoadId, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/ChangePartListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.ChangePartListingResponseBody> ChangePartListingAsync(ILSmartServiceReference.AviationPartInput[] Parts, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/ChangeMroListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.ChangeMroListingResponseBody> ChangeMroListingAsync(ILSmartServiceReference.MroInput[] Mros, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/Login", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.LoginResponseBody> LoginAsync(string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqsRecievedByDateRange", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsRecievedByDateRangeResponseBody> GetRfqsRecievedByDateRangeAsync(System.Nullable<System.DateTime> EndDate, bool IncludeClosed, string Password, System.Nullable<System.DateTime> StartDate, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRfqsSentByDateRange", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsSentByDateRange", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
         System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateRangeResponseBody> GetRfqsSentByDateRangeAsync(System.Nullable<System.DateTime> EndDate, string Password, System.Nullable<System.DateTime> StartDate, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRecentMessageBroadcasts", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsSentByDateRangeMobile", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRecentMessageBroadcastsResponseBody> GetRecentMessageBroadcastsAsync(System.Nullable<int> IncludeContent, System.Nullable<int> NumberOfMessageBroadcastsToRetrieve, System.Nullable<int> Offset, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateRangeMobileResponseBody> GetRfqsSentByDateRangeMobileAsync(System.Nullable<System.DateTime> EndDate, string ExternalSourceCd, string Key, string Password, System.Nullable<System.DateTime> StartDate, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendPartQuotesMobile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsReceivedByDate", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendPartQuotesMobileResponseBody> SendPartQuotesMobileAsync(string ExternalSourceCd, string Key, string Password, ILSmartServiceReference.PartsRfqQuoteInput Quotes, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateResponseBody> GetRfqsReceivedByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendMRORfq", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsReceivedByDateWithSenderInventory", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendMRORfqResponseBody> SendMRORfqAsync(ILSmartServiceReference.MROsRfqInput InputRfq, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateWithSenderInventoryResponseBody> GetRfqsReceivedByDateWithSenderInventoryAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/SendMROQuote", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsReceivedByDateRange", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.SendMROQuoteResponseBody> SendMROQuoteAsync(string Password, ILSmartServiceReference.MRORfqQuoteInput Quotes, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateRangeResponseBody> GetRfqsReceivedByDateRangeAsync(System.Nullable<System.DateTime> EndDate, bool IncludeClosed, string Password, System.Nullable<System.DateTime> StartDate, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/LoginMobile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqsReceivedByDateRangeMobile", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.LoginMobileResponseBody> LoginMobileAsync(string ExternalSourceCd, string Key, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateRangeMobileResponseBody> GetRfqsReceivedByDateRangeMobileAsync(System.Nullable<System.DateTime> EndDate, string ExternalSourceCd, bool IncludeClosed, string Key, string Password, System.Nullable<System.DateTime> StartDate, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetRecentMessageBroadcastsMobile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRfqCompanyInformation", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetRecentMessageBroadcastsMobileResponseBody> GetRecentMessageBroadcastsMobileAsync(string ExternalSourceCd, System.Nullable<int> IncludeContent, string Key, System.Nullable<int> NumberOfMessageBroadcastsToRetrieve, System.Nullable<int> Offset, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqCompanyInformationResponseBody> GetRfqCompanyInformationAsync(string CompanyId, string Password, System.Nullable<long> RfqId, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetPartQuotesMobile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetRetailPricing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesMobileResponseBody> GetPartQuotesMobileAsync(string ExternalSourceCd, string Key, string Password, System.Nullable<long> RfqId, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetRetailPricingResponseBody> GetRetailPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNewMroRfqsReceived", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetPmaData", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewMroRfqsReceivedResponseBody> GetNewMroRfqsReceivedAsync(bool IncludeClosed, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetPmaDataResponseBody> GetPmaDataAsync(string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMROQuotes", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetPartStatsAndPricing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMROQuotesResponseBody> GetMROQuotesAsync(string Password, System.Nullable<long> RfqId, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartStatsAndPricingResponseBody> GetPartStatsAndPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetNewMroQuotesReceived", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetPartsAvailability", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewMroQuotesReceivedResponseBody> GetNewMroQuotesReceivedAsync(bool IncludeClosed, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartsAvailabilityResponseBody> GetPartsAvailabilityAsync(string[] ConditionCodes, string Location, string PartNumber, string Password, System.Nullable<int> Quantity, System.Nullable<bool> UseMcrlXref, System.Nullable<bool> UsePmaXref, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMroRfq", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetPartsAvailabilityMobile", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMroResponseBody> GetMroRfqAsync(System.Nullable<long> MroRfqId, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartsAvailabilityMobileResponseBody> GetPartsAvailabilityMobileAsync(string[] ConditionCodes, string Location, string PartNumber, string Password, System.Nullable<int> Quantity, System.Nullable<bool> UseMcrlXref, System.Nullable<bool> UsePmaXref, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMroRfqsReceivedByDate", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetPartListing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMroRfqsReceivedByDateResponseBody> GetMroRfqsReceivedByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetPartListingResponseBody> GetPartListingAsync(string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMroRfqCompanyInformation", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetNewRfqsReceived", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMroRfqCompanyInformationResponseBody> GetMroRfqCompanyInformationAsync(string CompanyId, System.Nullable<long> MroRfqId, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewRfqsReceivedResponseBody> GetNewRfqsReceivedAsync(bool IncludeClosed, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetMroQuotesReceivedByDate", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetNewRfqsReceivedWithSenderInventory", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetMroQuotesReceivedByDateResponseBody> GetMroQuotesReceivedByDateAsync(System.DateTime DateToRetrieve, bool IncludeClosed, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetNewRfqsReceivedWithSenderInventoryResponseBody> GetNewRfqsReceivedWithSenderInventoryAsync(bool IncludeClosed, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetDocument", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetMROQuoteHistory", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetDocumentResponseBody> GetDocumentAsync(int DocumentId, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetMROQuoteHistoryResponseBody> GetMROQuoteHistoryAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetFmvPricing", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/GetGovernmentData", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetFmvPricingResponseBody> GetFmvPricingAsync(string PartNumber, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.GetGovernmentDataResponseBody> GetGovernmentDataAsync(string[] GovFilesToSearch, string PartNumber, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetAnnouncements", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/DeletePartListing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetAnnouncementsResponseBody> GetAnnouncementsAsync(string MessageTypeCD, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.DeletePartListingResponseBody> DeletePartListingAsync(ILSmartServiceReference.AviationPartRecordKey[] Parts, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/GetAnnouncementsMobile", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/ChangePartListing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.GetAnnouncementsMobileResponseBody> GetAnnouncementsMobileAsync(string ExternalSourceCd, string Key, string MessageTypeCD, string Password, string UserId);
+        System.Threading.Tasks.Task<ILSmartServiceReference.ChangePartListingResponseBody> ChangePartListingAsync(ILSmartServiceReference.AviationPartInput[] Parts, string Password, string UserId);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/AddPartListing", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v2/AddPartListing", ReplyAction="*")]
         [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
         System.Threading.Tasks.Task<ILSmartServiceReference.AddPartListingResponseBody> AddPartListingAsync(ILSmartServiceReference.AviationPartInput[] Parts, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/AddMroListing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.AddMroListingResponseBody> AddMroListingAsync(ILSmartServiceReference.MroInput[] Mros, string Password, string UserId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://namespace.ilsmart.com/v1/AddExternalPricing", ReplyAction="*")]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="Body")]
-        System.Threading.Tasks.Task<ILSmartServiceReference.AddExternalPricingResponseBody> AddExternalPricingAsync(string ConditionCode, string Currency, System.DateTime Date, string Description, string Domain, string PartNumber, string Password, string Quantity, decimal TotalPrice, string Type, decimal USDUnitPrice, string UnitOfMeasure, decimal UnitPrice, string UserId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
@@ -14508,69 +8645,29 @@ namespace ILSmartServiceReference
         {
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.UpdateViewedIndicatorResponseBody> UpdateViewedIndicatorAsync(string Password, System.Nullable<long> RfqId, string SupplierCompanyId, string UserId, System.Nullable<long> ViewedIndicator)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastResponseBody> SendMessageBroadcastAsync(string Category, ILSmartServiceReference.Document[] Documents, bool IsFeatured, string Message, string Password, string Type, string UserId)
         {
-            return base.Channel.UpdateViewedIndicatorAsync(Password, RfqId, SupplierCompanyId, UserId, ViewedIndicator);
+            return base.Channel.SendMessageBroadcastAsync(Category, Documents, IsFeatured, Message, Password, Type, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SubmitInventoryLoadResponseBody> SubmitInventoryLoadAsync(ILSmartServiceReference.EitSubmission Eit, string Password, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastMobileResponseBody> SendMessageBroadcastMobileAsync(string Category, ILSmartServiceReference.Document[] Documents, string ExternalSourceCd, bool IsFeatured, string Key, string Message, string Password, string Type, string UserId)
         {
-            return base.Channel.SubmitInventoryLoadAsync(Eit, Password, UserId);
+            return base.Channel.SendMessageBroadcastMobileAsync(Category, Documents, ExternalSourceCd, IsFeatured, Key, Message, Password, Type, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SubmitBatchSearchResponseBody> SubmitBatchSearchAsync(string Password, ILSmartServiceReference.BatchSearch SearchRequest, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.IsPartAvailableResponseBody> IsPartAvailableAsync(string PartNumber, string Password, string SupplierId, string UserId)
         {
-            return base.Channel.SubmitBatchSearchAsync(Password, SearchRequest, UserId);
+            return base.Channel.IsPartAvailableAsync(PartNumber, Password, SupplierId, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendMessageBroadcastResponseBody> SendMessageBroadcastAsync(string Category, string Message, string Password, string Type, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateRangeResponseBody> GetRfqsSentByDateRangeAsync(System.Nullable<System.DateTime> EndDate, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
         {
-            return base.Channel.SendMessageBroadcastAsync(Category, Message, Password, Type, UserId);
+            return base.Channel.GetRfqsSentByDateRangeAsync(EndDate, Password, StartDate, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendSearchlessPartRfqResponseBody> SendSearchlessPartRfqAsync(ILSmartServiceReference.SearchlessPartsRfqInput InputRfq, string Password, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateRangeMobileResponseBody> GetRfqsSentByDateRangeMobileAsync(System.Nullable<System.DateTime> EndDate, string ExternalSourceCd, string Key, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
         {
-            return base.Channel.SendSearchlessPartRfqAsync(InputRfq, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendQuickRfqResponseBody> SendQuickRfqAsync(string[] ConditionCodes, System.Nullable<bool> IncludeMcrlCrossRef, System.Nullable<bool> IncludePmaCrossRef, string Location, ILSmartServiceReference.QuickRfqPartInput[] Parts, string Password, System.Nullable<long> PreferredVendorGroupId, string UserId)
-        {
-            return base.Channel.SendQuickRfqAsync(ConditionCodes, IncludeMcrlCrossRef, IncludePmaCrossRef, Location, Parts, Password, PreferredVendorGroupId, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendPartRfqResponseBody> SendPartRfqAsync(ILSmartServiceReference.PartsRfqInput InputRfq, string Password, string UserId)
-        {
-            return base.Channel.SendPartRfqAsync(InputRfq, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendPartQuotesResponseBody> SendPartQuotesAsync(string Password, ILSmartServiceReference.PartsRfqQuoteInput Quotes, string UserId)
-        {
-            return base.Channel.SendPartQuotesAsync(Password, Quotes, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.IsPartAvailableResponseBody> IsPartAvailableAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.IsPartAvailableAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.IsMROPartAvailableResponseBody> IsMROPartAvailableAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.IsMROPartAvailableAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetSupplierDirectoryResponseBody> GetSupplierDirectoryAsync(string Location, string Password, string SearchTerm, string UserId)
-        {
-            return base.Channel.GetSupplierDirectoryAsync(Location, Password, SearchTerm, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqResponseBody> GetRfqAsync(string Password, System.Nullable<long> RfqId, string UserId)
-        {
-            return base.Channel.GetRfqAsync(Password, RfqId, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateResponseBody> GetRfqsSentByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, string Password, string UserId)
-        {
-            return base.Channel.GetRfqsSentByDateAsync(DateToRetrieve, Password, UserId);
+            return base.Channel.GetRfqsSentByDateRangeMobileAsync(EndDate, ExternalSourceCd, Key, Password, StartDate, UserId);
         }
         
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateResponseBody> GetRfqsReceivedByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId)
@@ -14583,19 +8680,29 @@ namespace ILSmartServiceReference
             return base.Channel.GetRfqsReceivedByDateWithSenderInventoryAsync(DateToRetrieve, IncludeClosed, Password, UserId);
         }
         
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateRangeResponseBody> GetRfqsReceivedByDateRangeAsync(System.Nullable<System.DateTime> EndDate, bool IncludeClosed, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
+        {
+            return base.Channel.GetRfqsReceivedByDateRangeAsync(EndDate, IncludeClosed, Password, StartDate, UserId);
+        }
+        
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsReceivedByDateRangeMobileResponseBody> GetRfqsReceivedByDateRangeMobileAsync(System.Nullable<System.DateTime> EndDate, string ExternalSourceCd, bool IncludeClosed, string Key, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
+        {
+            return base.Channel.GetRfqsReceivedByDateRangeMobileAsync(EndDate, ExternalSourceCd, IncludeClosed, Key, Password, StartDate, UserId);
+        }
+        
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqCompanyInformationResponseBody> GetRfqCompanyInformationAsync(string CompanyId, string Password, System.Nullable<long> RfqId, string UserId)
         {
             return base.Channel.GetRfqCompanyInformationAsync(CompanyId, Password, RfqId, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqAttachedDocumentsResponseBody> GetRfqAttachedDocumentsAsync(System.Nullable<long>[] DocumentId, string Password, System.Nullable<long> RfqId, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRetailPricingResponseBody> GetRetailPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
         {
-            return base.Channel.GetRfqAttachedDocumentsAsync(DocumentId, Password, RfqId, UserId);
+            return base.Channel.GetRetailPricingAsync(ExactMatch, PartNumber, Password, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPreferredVendorGroupsResponseBody> GetPreferredVendorGroupsAsync(string Password, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPmaDataResponseBody> GetPmaDataAsync(string PartNumber, string Password, string UserId)
         {
-            return base.Channel.GetPreferredVendorGroupsAsync(Password, UserId);
+            return base.Channel.GetPmaDataAsync(PartNumber, Password, UserId);
         }
         
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartStatsAndPricingResponseBody> GetPartStatsAndPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
@@ -14613,49 +8720,9 @@ namespace ILSmartServiceReference
             return base.Channel.GetPartsAvailabilityMobileAsync(ConditionCodes, Location, PartNumber, Password, Quantity, UseMcrlXref, UsePmaXref, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesResponseBody> GetPartQuotesAsync(string Password, System.Nullable<long> RfqId, string UserId)
-        {
-            return base.Channel.GetPartQuotesAsync(Password, RfqId, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesByDateResponseBody> GetPartQuotesByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, string Password, string UserId)
-        {
-            return base.Channel.GetPartQuotesByDateAsync(DateToRetrieve, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuoteHistoryResponseBody> GetPartQuoteHistoryAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetPartQuoteHistoryAsync(ExactMatch, PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartPublishedPricingResponseBody> GetPartPublishedPricingAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetPartPublishedPricingAsync(ExactMatch, PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartOverhaulStatsResponseBody> GetPartOverhaulStatsAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetPartOverhaulStatsAsync(ExactMatch, PartNumber, Password, UserId);
-        }
-        
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartListingResponseBody> GetPartListingAsync(string PartNumber, string Password, string UserId)
         {
             return base.Channel.GetPartListingAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartInventorySummaryResponseBody> GetPartInventorySummaryAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetPartInventorySummaryAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartInventoryStatsResponseBody> GetPartInventoryStatsAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetPartInventoryStatsAsync(ExactMatch, PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetNiinsByPartResponseBody> GetNiinsByPartAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetNiinsByPartAsync(PartNumber, Password, UserId);
         }
         
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetNewRfqsReceivedResponseBody> GetNewRfqsReceivedAsync(bool IncludeClosed, string Password, string UserId)
@@ -14668,19 +8735,9 @@ namespace ILSmartServiceReference
             return base.Channel.GetNewRfqsReceivedWithSenderInventoryAsync(IncludeClosed, Password, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetNewPartQuotesReceivedResponseBody> GetNewPartQuotesReceivedAsync(bool IncludeQuotesForClosedRfqs, string Password, string UserId)
+        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMROQuoteHistoryResponseBody> GetMROQuoteHistoryAsync(System.Nullable<bool> ExactMatch, string PartNumber, string Password, string UserId)
         {
-            return base.Channel.GetNewPartQuotesReceivedAsync(IncludeQuotesForClosedRfqs, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMrosAvailabilityResponseBody> GetMrosAvailabilityAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetMrosAvailabilityAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMROPartInventorySummaryResponseBody> GetMROPartInventorySummaryAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetMROPartInventorySummaryAsync(PartNumber, Password, UserId);
+            return base.Channel.GetMROQuoteHistoryAsync(ExactMatch, PartNumber, Password, UserId);
         }
         
         public System.Threading.Tasks.Task<ILSmartServiceReference.GetGovernmentDataResponseBody> GetGovernmentDataAsync(string[] GovFilesToSearch, string PartNumber, string Password, string UserId)
@@ -14688,34 +8745,9 @@ namespace ILSmartServiceReference
             return base.Channel.GetGovernmentDataAsync(GovFilesToSearch, PartNumber, Password, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetCageContactResponseBody> GetCageContactAsync(string Cage, string Password, string UserId)
-        {
-            return base.Channel.GetCageContactAsync(Cage, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetBatchSearchResultsResponseBody> GetBatchSearchResultsAsync(System.Nullable<long> BatchSearchId, string Password, string UserId)
-        {
-            return base.Channel.GetBatchSearchResultsAsync(BatchSearchId, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetAllDataLegacyResponseBody> GetAllDataLegacyAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetAllDataLegacyAsync(PartNumber, Password, UserId);
-        }
-        
         public System.Threading.Tasks.Task<ILSmartServiceReference.DeletePartListingResponseBody> DeletePartListingAsync(ILSmartServiceReference.AviationPartRecordKey[] Parts, string Password, string UserId)
         {
             return base.Channel.DeletePartListingAsync(Parts, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.DeleteMroListingResponseBody> DeleteMroListingAsync(ILSmartServiceReference.MroRecordDeleteKey[] Mros, string Password, string UserId)
-        {
-            return base.Channel.DeleteMroListingAsync(Mros, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.CheckInventoryLoadResponseBody> CheckInventoryLoadAsync(System.Nullable<long> InventoryLoadId, string Password, string UserId)
-        {
-            return base.Channel.CheckInventoryLoadAsync(InventoryLoadId, Password, UserId);
         }
         
         public System.Threading.Tasks.Task<ILSmartServiceReference.ChangePartListingResponseBody> ChangePartListingAsync(ILSmartServiceReference.AviationPartInput[] Parts, string Password, string UserId)
@@ -14723,129 +8755,9 @@ namespace ILSmartServiceReference
             return base.Channel.ChangePartListingAsync(Parts, Password, UserId);
         }
         
-        public System.Threading.Tasks.Task<ILSmartServiceReference.ChangeMroListingResponseBody> ChangeMroListingAsync(ILSmartServiceReference.MroInput[] Mros, string Password, string UserId)
-        {
-            return base.Channel.ChangeMroListingAsync(Mros, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.LoginResponseBody> LoginAsync(string Password, string UserId)
-        {
-            return base.Channel.LoginAsync(Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsRecievedByDateRangeResponseBody> GetRfqsRecievedByDateRangeAsync(System.Nullable<System.DateTime> EndDate, bool IncludeClosed, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
-        {
-            return base.Channel.GetRfqsRecievedByDateRangeAsync(EndDate, IncludeClosed, Password, StartDate, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRfqsSentByDateRangeResponseBody> GetRfqsSentByDateRangeAsync(System.Nullable<System.DateTime> EndDate, string Password, System.Nullable<System.DateTime> StartDate, string UserId)
-        {
-            return base.Channel.GetRfqsSentByDateRangeAsync(EndDate, Password, StartDate, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRecentMessageBroadcastsResponseBody> GetRecentMessageBroadcastsAsync(System.Nullable<int> IncludeContent, System.Nullable<int> NumberOfMessageBroadcastsToRetrieve, System.Nullable<int> Offset, string Password, string UserId)
-        {
-            return base.Channel.GetRecentMessageBroadcastsAsync(IncludeContent, NumberOfMessageBroadcastsToRetrieve, Offset, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendPartQuotesMobileResponseBody> SendPartQuotesMobileAsync(string ExternalSourceCd, string Key, string Password, ILSmartServiceReference.PartsRfqQuoteInput Quotes, string UserId)
-        {
-            return base.Channel.SendPartQuotesMobileAsync(ExternalSourceCd, Key, Password, Quotes, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendMRORfqResponseBody> SendMRORfqAsync(ILSmartServiceReference.MROsRfqInput InputRfq, string Password, string UserId)
-        {
-            return base.Channel.SendMRORfqAsync(InputRfq, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.SendMROQuoteResponseBody> SendMROQuoteAsync(string Password, ILSmartServiceReference.MRORfqQuoteInput Quotes, string UserId)
-        {
-            return base.Channel.SendMROQuoteAsync(Password, Quotes, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.LoginMobileResponseBody> LoginMobileAsync(string ExternalSourceCd, string Key, string Password, string UserId)
-        {
-            return base.Channel.LoginMobileAsync(ExternalSourceCd, Key, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetRecentMessageBroadcastsMobileResponseBody> GetRecentMessageBroadcastsMobileAsync(string ExternalSourceCd, System.Nullable<int> IncludeContent, string Key, System.Nullable<int> NumberOfMessageBroadcastsToRetrieve, System.Nullable<int> Offset, string Password, string UserId)
-        {
-            return base.Channel.GetRecentMessageBroadcastsMobileAsync(ExternalSourceCd, IncludeContent, Key, NumberOfMessageBroadcastsToRetrieve, Offset, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetPartQuotesMobileResponseBody> GetPartQuotesMobileAsync(string ExternalSourceCd, string Key, string Password, System.Nullable<long> RfqId, string UserId)
-        {
-            return base.Channel.GetPartQuotesMobileAsync(ExternalSourceCd, Key, Password, RfqId, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetNewMroRfqsReceivedResponseBody> GetNewMroRfqsReceivedAsync(bool IncludeClosed, string Password, string UserId)
-        {
-            return base.Channel.GetNewMroRfqsReceivedAsync(IncludeClosed, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMROQuotesResponseBody> GetMROQuotesAsync(string Password, System.Nullable<long> RfqId, string UserId)
-        {
-            return base.Channel.GetMROQuotesAsync(Password, RfqId, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetNewMroQuotesReceivedResponseBody> GetNewMroQuotesReceivedAsync(bool IncludeClosed, string Password, string UserId)
-        {
-            return base.Channel.GetNewMroQuotesReceivedAsync(IncludeClosed, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMroResponseBody> GetMroRfqAsync(System.Nullable<long> MroRfqId, string Password, string UserId)
-        {
-            return base.Channel.GetMroRfqAsync(MroRfqId, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMroRfqsReceivedByDateResponseBody> GetMroRfqsReceivedByDateAsync(System.Nullable<System.DateTime> DateToRetrieve, bool IncludeClosed, string Password, string UserId)
-        {
-            return base.Channel.GetMroRfqsReceivedByDateAsync(DateToRetrieve, IncludeClosed, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMroRfqCompanyInformationResponseBody> GetMroRfqCompanyInformationAsync(string CompanyId, System.Nullable<long> MroRfqId, string Password, string UserId)
-        {
-            return base.Channel.GetMroRfqCompanyInformationAsync(CompanyId, MroRfqId, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetMroQuotesReceivedByDateResponseBody> GetMroQuotesReceivedByDateAsync(System.DateTime DateToRetrieve, bool IncludeClosed, string Password, string UserId)
-        {
-            return base.Channel.GetMroQuotesReceivedByDateAsync(DateToRetrieve, IncludeClosed, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetDocumentResponseBody> GetDocumentAsync(int DocumentId, string Password, string UserId)
-        {
-            return base.Channel.GetDocumentAsync(DocumentId, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetFmvPricingResponseBody> GetFmvPricingAsync(string PartNumber, string Password, string UserId)
-        {
-            return base.Channel.GetFmvPricingAsync(PartNumber, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetAnnouncementsResponseBody> GetAnnouncementsAsync(string MessageTypeCD, string Password, string UserId)
-        {
-            return base.Channel.GetAnnouncementsAsync(MessageTypeCD, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.GetAnnouncementsMobileResponseBody> GetAnnouncementsMobileAsync(string ExternalSourceCd, string Key, string MessageTypeCD, string Password, string UserId)
-        {
-            return base.Channel.GetAnnouncementsMobileAsync(ExternalSourceCd, Key, MessageTypeCD, Password, UserId);
-        }
-        
         public System.Threading.Tasks.Task<ILSmartServiceReference.AddPartListingResponseBody> AddPartListingAsync(ILSmartServiceReference.AviationPartInput[] Parts, string Password, string UserId)
         {
             return base.Channel.AddPartListingAsync(Parts, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.AddMroListingResponseBody> AddMroListingAsync(ILSmartServiceReference.MroInput[] Mros, string Password, string UserId)
-        {
-            return base.Channel.AddMroListingAsync(Mros, Password, UserId);
-        }
-        
-        public System.Threading.Tasks.Task<ILSmartServiceReference.AddExternalPricingResponseBody> AddExternalPricingAsync(string ConditionCode, string Currency, System.DateTime Date, string Description, string Domain, string PartNumber, string Password, string Quantity, decimal TotalPrice, string Type, decimal USDUnitPrice, string UnitOfMeasure, decimal UnitPrice, string UserId)
-        {
-            return base.Channel.AddExternalPricingAsync(ConditionCode, Currency, Date, Description, Domain, PartNumber, Password, Quantity, TotalPrice, Type, USDUnitPrice, UnitOfMeasure, UnitPrice, UserId);
         }
         
         public virtual System.Threading.Tasks.Task OpenAsync()
@@ -14877,7 +8789,7 @@ namespace ILSmartServiceReference
         {
             if ((endpointConfiguration == EndpointConfiguration.BasicHttpBinding_ISyncReply))
             {
-                return new System.ServiceModel.EndpointAddress("https://secure.ilsmart.com/services/v1/soap11");
+                return new System.ServiceModel.EndpointAddress("https://secure.ilsmart.com/services/v2/soap11");
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
