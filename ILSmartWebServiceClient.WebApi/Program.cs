@@ -3,6 +3,7 @@ using ILSmartWebServiceClient.Data;
 using ILSmartWebServiceClient.Data.Database;
 using ILSmarWebServiceClient.LIbrary;
 using Microsoft.EntityFrameworkCore;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
