@@ -56,7 +56,7 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
 
             foreach (string partNumber in nsnArraay)
             {
-                var ilsDataForNsn = TransFormIlsData(govtFilesToSearch, partNumber, userDetails.pwd, userDetails.userId);
+                var ilsDataForNsn = TransFormIlsData(govtFilesToSearch, partNumber);
             }
 
             return await Task.Run(() => { return new GovernmentDataReport(); });
