@@ -34,7 +34,35 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
 
         [Route("[action]/{govtFilesToSearch}/{partNumber}")]
         [HttpGet]
-        public async Task<GetGovernmentDataResponseBody> GetGovernmentData([FromRoute] string govtFilesToSearch, [FromRoute] string partNumber)
+        public async Task<GetGovernmentDataResponseBody> GetGovernmentData([FromRoute] string[] govtFilesToSearch, [FromRoute] string partNumber)
+        {
+            var userDetails = GetUserIdAndPassword();
+            return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(govtFilesToSearch, partNumber, userDetails.pwd, userDetails.userId);
+        }
+
+        [Route("[action]/{govtFilesToSearch}/{nsn}")]
+        [HttpGet]
+        public async Task<GovernmentDataReport> GetGovernmentDataReportByNsn([FromRoute] string[] govtFilesToSearch, [FromRoute] string nsn)
+        {
+            var userDetails = GetUserIdAndPassword();
+            return await Task.Run(()=> { return new GovernmentDataReport(); });
+        }
+
+        [Route("[action]/{govtFilesToSearch}/{nsnArraay}")]
+        [HttpGet]
+        public async Task<GovernmentDataReport> GetGovernmentDataReportByNsnArray([FromRoute] string[] govtFilesToSearch, [FromRoute] string[] nsnArraay)
+        {
+            var userDetails = GetUserIdAndPassword();
+
+            foreach (string partNumber in nsnArraay)
+            {
+                var ilsDataForNsn = TransFormIlsData(govtFilesToSearch, partNumber, userDetails.pwd, userDetails.userId);
+            }
+
+            return await Task.Run(() => { return new GovernmentDataReport(); });
+        }
+
+        public (string userId, string pwd) GetUserIdAndPassword()
         {
             bool ilsUseTestUser = _configuration.GetValue<bool>(IlsUseTestUser);
             string userId, pwd;
@@ -49,7 +77,25 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
                 pwd = _configuration.GetValue<string>(IlsUserPwd);
             }
 
-            return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { govtFilesToSearch }, partNumber, pwd, userId);
+            return (userId, pwd);
+        }
+
+        public GovernmentDataReport TransFormIlsData(string[] govtFilesToSearch, string partNumber)
+        {
+            var userDetails = GetUserIdAndPassword();
+            var ilsDataForNsn =  _ilSmarWebServiceClientService.GetGovernmentDataAsync(govtFilesToSearch, partNumber, userDetails.pwd, userDetails.userId).GetAwaiter().GetResult();
+
+            foreach (var governmentDataSearchResults in ilsDataForNsn.GovernmentSearchResults)
+            {
+                //governmentDataSearchResults.CrossReferenceData.CrfItem[0].CompanyName;
+            }
+
+            var govDataRes = new GovernmentDataReport()
+            {
+                AMSC = string.Empty
+            };
+
+            return govDataRes;
         }
     }
 }
