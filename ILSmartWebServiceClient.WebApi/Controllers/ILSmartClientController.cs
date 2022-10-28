@@ -39,24 +39,17 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
             return await _ilSmarWebServiceClientService.GetGovernmentDataAsync(new string[] { govtFilesToSearch }, partNumber, userDetails.pwd, userDetails.userId);
         }
 
-        [Route("[action]/{govtFilesToSearchArray}/{nsn}")]
-        [HttpGet]
-        public async Task<List<GovernmentDataReport>> GetGovernmentDataReportByNsn([FromRoute] string[] govtFilesToSearchArray, [FromRoute] string nsn)
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<List<GetGovernmentDataResponseBody>> GetGovernmentDataReportByNsnArray([FromBody] NsnInput multipleNsnInput)
         {
-            var ilsDataForNsn = await TransFormIlsData(govtFilesToSearchArray[0].Split(","), nsn);
+            List<GetGovernmentDataResponseBody> governmentDataReports = new List<GetGovernmentDataResponseBody>();
 
-            return ilsDataForNsn;
-        }
-
-        [Route("[action]/{govtFilesToSearchArray}/{nsnArraay}")]
-        [HttpGet]
-        public async Task<List<GovernmentDataReport>> GetGovernmentDataReportByNsnArray([FromRoute] string[] govtFilesToSearchArray, [FromRoute] string[] nsnArraay)
-        {
-            List<GovernmentDataReport> governmentDataReports = new List<GovernmentDataReport>();
-
-            foreach (string partNumber in nsnArraay[0].Split(","))
+            foreach (var nsn in multipleNsnInput.NsnArray)
             {
-                governmentDataReports.AddRange(await TransFormIlsData(govtFilesToSearchArray[0].Split(","), partNumber));
+                var userDetails = GetUserIdAndPassword();
+                var ilsDataForNsn = await _ilSmarWebServiceClientService.GetGovernmentDataAsync(multipleNsnInput.GovtFilesToSearchArray, nsn, userDetails.pwd, userDetails.userId);
+                governmentDataReports.Add(ilsDataForNsn);
             }
 
             return governmentDataReports;
@@ -78,71 +71,6 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
             }
 
             return (userId, pwd);
-        }
-
-        private async Task<List<GovernmentDataReport>> TransFormIlsData(string[] govtFilesToSearch, string partNumber)
-        {
-            List<GovernmentDataReport> governmentDataReports = new List<GovernmentDataReport>();
-
-            var userDetails = GetUserIdAndPassword();
-            var ilsDataForNsn = await _ilSmarWebServiceClientService.GetGovernmentDataAsync(govtFilesToSearch, partNumber, userDetails.pwd, userDetails.userId);
-
-            foreach (var governmentDataSearchResults in ilsDataForNsn.GovernmentSearchResults)
-            {
-                var nsn = governmentDataSearchResults.Fsc + governmentDataSearchResults.Niin;
-                var phData = governmentDataSearchResults.ProcurementHistoryData;
-                var nsnInfo = governmentDataSearchResults.NsnInfo;
-                var dlaData = governmentDataSearchResults.DlaData;
-
-
-                var yr1Dla = dlaData.DlaItems.ToArray()[0];
-                var yr2Dla = dlaData.DlaItems.ToArray()[1];
-
-                var yr1Qty = Convert.ToInt32(yr1Dla.Jan) + Convert.ToInt32(yr1Dla.Feb) + Convert.ToInt32(yr1Dla.Mar)
-                             + Convert.ToInt32(yr1Dla.Apr) + Convert.ToInt32(yr1Dla.May) + Convert.ToInt32(yr1Dla.Jun)
-                             + Convert.ToInt32(yr1Dla.Jul) + Convert.ToInt32(yr1Dla.Aug) + Convert.ToInt32(yr1Dla.Sep)
-                             + Convert.ToInt32(yr1Dla.Oct) + Convert.ToInt32(yr1Dla.Nov) + Convert.ToInt32(yr1Dla.Dec);
-
-                var yr2Qty = Convert.ToInt32(yr2Dla.Jan) + Convert.ToInt32(yr2Dla.Feb) + Convert.ToInt32(yr2Dla.Mar)
-                             + Convert.ToInt32(yr2Dla.Apr) + Convert.ToInt32(yr2Dla.May) + Convert.ToInt32(yr2Dla.Jun)
-                             + Convert.ToInt32(yr2Dla.Jul) + Convert.ToInt32(yr2Dla.Aug) + Convert.ToInt32(yr2Dla.Sep)
-                             + Convert.ToInt32(yr2Dla.Oct) + Convert.ToInt32(yr2Dla.Nov) + Convert.ToInt32(yr2Dla.Dec);
-
-                var twoYearsDlaDemand = yr1Qty + yr2Qty;
-
-                var phCount = phData.ProcurementEntry.Length;
-
-                var phLatest = phData.ProcurementEntry[0];
-                var phFirst = phData.ProcurementEntry[phCount - 1];
-
-
-                var govDataRes = new GovernmentDataReport()
-                {
-                    NSN = nsn,
-                    NSNDescription = governmentDataSearchResults.ItemName,
-                    LastAwardDate = phLatest.AwardDate.HasValue ? phLatest.AwardDate.Value.Year.ToString() : string.Empty,
-                    FirstAwardDate = phFirst.AwardDate.HasValue ? phFirst.AwardDate.Value.Year.ToString() : string.Empty,
-                    Dla2YrDemand = twoYearsDlaDemand,
-                    LastAwardPrice = phLatest.TotalPrice,
-                    LastAwardQty = phLatest.Quantity,
-                    AMSC = string.Empty,
-                    DLAOffice = string.Empty,
-                    PotentialSales = 0,
-                    LosesPercentage = 0,
-                    RecentWins = 0,
-                    RecentWinsPercentage = 0,
-                    TotalQuantity = Convert.ToInt32(phLatest.Quantity) + Convert.ToInt32(phFirst.Quantity),
-                    TotalWins = 0,
-                    WinsPercentage = 0,
-                    TotalContracts = dlaData.DlaItems.Length,
-                };
-
-                governmentDataReports.Add(govDataRes);
-            }
-
-
-
-            return governmentDataReports;
         }
     }
 }
