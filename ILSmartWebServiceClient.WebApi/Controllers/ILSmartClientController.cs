@@ -59,7 +59,7 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
                 governmentDataReports.AddRange(await TransFormIlsData(govtFilesToSearchArray[0].Split(","), partNumber));
             }
 
-             return governmentDataReports;
+            return governmentDataReports;
         }
 
         private (string userId, string pwd) GetUserIdAndPassword()
@@ -122,7 +122,19 @@ namespace ILSmartWebServiceClient.WebApi.Controllers
                     NSNDescription = governmentDataSearchResults.ItemName,
                     LastAwardDate = phLatest.AwardDate.HasValue ? phLatest.AwardDate.Value.Year.ToString() : string.Empty,
                     FirstAwardDate = phFirst.AwardDate.HasValue ? phFirst.AwardDate.Value.Year.ToString() : string.Empty,
-                    Dla2YrDemand = twoYearsDlaDemand
+                    Dla2YrDemand = twoYearsDlaDemand,
+                    LastAwardPrice = phLatest.TotalPrice,
+                    LastAwardQty = phLatest.Quantity,
+                    AMSC = string.Empty,
+                    DLAOffice = string.Empty,
+                    PotentialSales = 0,
+                    LosesPercentage = 0,
+                    RecentWins = 0,
+                    RecentWinsPercentage = 0,
+                    TotalQuantity = Convert.ToInt32(phLatest.Quantity) + Convert.ToInt32(phFirst.Quantity),
+                    TotalWins = 0,
+                    WinsPercentage = 0,
+                    TotalContracts = dlaData.DlaItems.Length,
                 };
 
                 governmentDataReports.Add(govDataRes);

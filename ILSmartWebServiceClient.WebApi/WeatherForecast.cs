@@ -26,9 +26,9 @@ namespace ILSmartWebServiceClient.WebApi
 
         public string LastAwardDate { get; set; }
 
-        public string LastAwardPrice { get; set; }
+        public decimal? LastAwardPrice { get; set; }
 
-        public int LastAwardQty { get; set; }
+        public string LastAwardQty { get; set; }
 
         public int TotalContracts { get; set; }
 
