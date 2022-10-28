@@ -16,7 +16,7 @@ namespace ILSmartWebServiceClient.WebApi
 
     public class GovernmentDataReport
     {
-        public int NSN { get; set; }
+        public string NSN { get; set; }
 
         public string NSNDescription { get; set; }
 
